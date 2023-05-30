@@ -1,0 +1,56 @@
+.drop {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+        25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+        inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    transition: ease 0.5s;
+}
+
+.drop:nth-child(1) {
+    border-radius: 43% 57% 69% 31% / 30% 56% 44% 70%;
+}
+
+.drop:nth-child(2) {
+    border-radius: 54% 46% 43% 57% / 58% 79% 21% 42%;
+}
+
+.drop:nth-child(3) {
+    border-radius: 54% 46% 52% 80% / 58% 79% 21% 42%;
+}
+
+.drop:hover {
+    border-radius: 50%;
+}
+
+.drop::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    width: 15px;
+    height: 15px;
+
+    box-shadow: inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    border-radius: 45% 43% 45% 43% / 55% 55% 55% 55%;
+    opacity: 0.8;
+}
+
+.drop::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    width: 8px;
+    height: 8px;
+    box-shadow: inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+
+    border-radius: 43% 45% 43% 45% / 52% 55% 55% 52%;
+    opacity: 0.8;
+}
+
+.drop:hover:before,
+.drop:hover:after {
+    border-radius: 50%;
+}
