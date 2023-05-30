@@ -1,0 +1,141 @@
+.icon {
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.spanIcon {
+    height: 50px;
+    width: 50px;
+    display: block;
+    /* background: #fff; */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.nextBrand {
+    background-image: url("/assets/images/fa-next.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+}
+
+.tailwindBrand {
+    background-image: url("/assets/images/fa-tailwind.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flutterBrand {
+    background-image: url("/assets/images/fa-flutter.svg");
+    background-size: 50%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tsBrand {
+    background-image: url("/assets/images/fa-typescript.svg");
+    background-size: 50%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tooltip {
+    position: absolute;
+    top: 0px;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+    top: -70px;
+    opacity: 1;
+}
+
+.icon:hover .spanIcon,
+.icon:hover .tooltip {
+    color: #efefef;
+}
+.nextBrand:hover .spanIcon,
+.nextBrand:hover .tooltip,
+.nextBrand:hover .tooltip::before {
+    background: #333;
+}
+
+.nextBrand:hover .spanIcon {
+    background-image: url("/assets/images/fa-next-light.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tailwindBrand:hover .spanIcon,
+.tailwindBrand:hover .tooltip,
+.tailwindBrand:hover .tooltip::before {
+    background: #06b6d4;
+}
+
+.tailwindBrand:hover .spanIcon {
+    background-image: url("/assets/images/fa-tailwind-dark.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flutterBrand:hover .spanIcon,
+.flutterBrand:hover .tooltip,
+.flutterBrand:hover .tooltip::before {
+    background: #42a5f5;
+}
+
+.flutterBrand:hover .spanIcon {
+    background-image: url("/assets/images/fa-flutter-dark.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tsBrand:hover .spanIcon,
+.tsBrand:hover .tooltip,
+.tsBrand:hover .tooltip::before {
+    background: #235a97;
+}
+
+.tsBrand:hover .spanIcon {
+    background-image: url("/assets/images/fa-typescript-dark.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -65,3 +65,7 @@
     height: 30px;
     color: #000;
 }
+
+.activeSpan:hover {
+    color: rgb(3 105 161);
+}

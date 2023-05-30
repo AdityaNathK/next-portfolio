@@ -1,25 +1,42 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from "./TechStackBadge.module.css";
 
 type BadgeProps = {
     tooltip: string;
     iconSrc: IconProp;
-    brandColor: string;
+    styleClass: string;
 };
 
 const TechStackBadge = (props: BadgeProps) => {
-    const { tooltip, iconSrc, brandColor } = props;
+    const { tooltip, iconSrc, styleClass } = props;
+    let brandStyles;
+
+    switch (styleClass) {
+        case "htmlBrand":
+            brandStyles = styles.htmlBrand;
+            break;
+        case "cssBrand":
+            brandStyles = styles.cssBrand;
+            break;
+        case "jsBrand":
+            brandStyles = styles.jsBrand;
+            break;
+        case "reactBrand":
+            brandStyles = styles.reactBrand;
+            break;
+        case "scssBrand":
+            brandStyles = styles.scssBrand;
+            break;
+    }
+
     return (
         <div className={styles.wrapper}>
-            <div className={styles.icon}>
-                <div className={`${styles.tooltip} before:${brandColor}`}>
-                    {tooltip}
-                </div>
-                <span className={`${styles.spanIcon} hover:${brandColor}`}>
+            <div className={`${styles.icon} ${brandStyles}`}>
+                <div className={`${styles.tooltip}`}>{tooltip}</div>
+                <span className={`${styles.spanIcon}`}>
                     <FontAwesomeIcon
-                        className={`${styles.iconStyles} `}
+                        className={`${styles.iconStyles} ${brandStyles}`}
                         icon={iconSrc}
                     />
                 </span>

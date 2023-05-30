@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./WaterDropCard.module.css";
-import { htmlLogo, tsLogo, nextLogo } from "@utils/fa-assets";
+import { nextLogo } from "@utils/fa-assets";
 
 const WaterDropCard = () => {
     return (
