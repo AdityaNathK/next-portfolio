@@ -1,18 +1,26 @@
 import TechStackBadge from "@components/Body/TechStackBadge";
-
-import { htmlLogo, githubLogo, linkedinLogo } from "@utils/fa-assets";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Landing.module.css";
+import { nextLogo } from "@utils/fa-assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+    faLinkedin,
+    faGithub,
+    faHtml5,
+    faCss3Alt,
+    faJs,
+    faReact,
+    faSass,
+} from "@fortawesome/free-brands-svg-icons";
+import TechImageBadge from "@components/Body/TechImageBadge";
 
 const Landing = () => {
     return (
         <div className="container flex flex-col justify-center">
             <section
                 id="landing"
-                className=" flex items-center gap-10 justify-center relative h-[32rem] content text-black z-10"
+                className=" flex items-center gap-10 justify-center relative h-[22rem] content text-black z-10"
             >
                 <section>
                     <h2 className="text-2xl w-[40rem] my-10">
@@ -28,7 +36,7 @@ const Landing = () => {
                             in Adelaide, Australia 🇦🇺
                         </p>
                     </h2>
-                    <section className="flex -mt-3 gap-5 w-[20rem]">
+                    <section className="flex -mt-3 gap-5 w-[18rem]">
                         <Link
                             href="https://github.com/AdityaNathK"
                             target="_blank"
@@ -59,21 +67,49 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-
-            <TechStackBadge
-                tooltip="HTML"
-                iconSrc={faGithub}
-                brandColor="bg-sky-500"
-            />
-            <section className="flex">
-                <h2 className="text-xl">Tech Stack</h2>
-                <span className="flex">
-                    [<div>HTML</div>
-                    <div>CSS</div>
-                    <div>JS</div>
-                    <div>ReactJs</div>
-                    <div>NextJs</div>]
-                </span>
+            <section
+                className={`${styles.activeSpan} flex mr-auto items-center `}
+            >
+                <h3 className="text-xl pr-5">Tech Stack</h3>
+                <div className="flex gap-2 items-center">
+                    <span className="text-2xl">|</span>
+                    <TechStackBadge
+                        tooltip="HTML"
+                        iconSrc={faHtml5}
+                        styleClass="htmlBrand"
+                    />
+                    <TechStackBadge
+                        tooltip="CSS"
+                        iconSrc={faCss3Alt}
+                        styleClass="cssBrand"
+                    />
+                    <TechStackBadge
+                        tooltip="JS"
+                        iconSrc={faJs}
+                        styleClass="jsBrand"
+                    />
+                    <TechStackBadge
+                        tooltip="ReactJs"
+                        iconSrc={faReact}
+                        styleClass="reactBrand"
+                    />
+                    <TechStackBadge
+                        tooltip="SCSS"
+                        iconSrc={faSass}
+                        styleClass="scssBrand"
+                    />
+                    <TechImageBadge tooltip="NextJs" styleClass="nextBrand" />
+                    <TechImageBadge
+                        tooltip="Tailwind"
+                        styleClass="tailwindBrand"
+                    />
+                    <TechImageBadge
+                        tooltip="Flutter"
+                        styleClass="flutterBrand"
+                    />
+                    <TechImageBadge tooltip="TypeScript" styleClass="tsBrand" />
+                </div>
+                <div>&nbsp;</div>
             </section>
         </div>
     );

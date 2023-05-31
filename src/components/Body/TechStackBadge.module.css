@@ -11,8 +11,8 @@
 }
 
 .spanIcon {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     display: block;
     background: #fff;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -25,15 +25,35 @@
 .icon:hover .spanIcon .iconStyles {
     color: white;
 }
+
 .iconStyles {
-    font-size: 35px;
+    font-size: 30px;
     position: relative;
     top: 22%;
 }
 
+.htmlBrand {
+    color: #e34c26;
+}
+
+.cssBrand {
+    color: #2965f1;
+}
+
+.jsBrand {
+    color: #f0db4f;
+}
+
+.reactBrand {
+    color: #61dbfb;
+}
+.scssBrand {
+    color: #cc6699;
+}
+
 .tooltip {
     position: absolute;
-    top: 20px;
+    top: 0px;
     background: #fff;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     font-size: 20px;
@@ -51,7 +71,7 @@
     height: 15px;
     width: 15px;
     background: #fff;
-    bottom: -8px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -64,12 +84,37 @@
 
 .icon:hover .spanIcon,
 .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
-    color: white;
+    color: #efefef;
 }
 
-/* .icon:hover .spanIcon,
-.icon:hover .tooltip,
-.icon:hover .tooltip::before {
-    background: red;
-} */
+.htmlBrand:hover .spanIcon,
+.htmlBrand:hover .tooltip,
+.htmlBrand:hover .tooltip::before {
+    background: #e34c26;
+}
+
+.cssBrand:hover .spanIcon,
+.cssBrand:hover .tooltip,
+.cssBrand:hover .tooltip::before {
+    background: #2965f1;
+}
+
+.jsBrand:hover .spanIcon,
+.jsBrand:hover .tooltip,
+.jsBrand:hover .tooltip::before {
+    background: #f0db4f;
+    color: #323330;
+}
+
+.reactBrand:hover .spanIcon,
+.reactBrand:hover .tooltip,
+.reactBrand:hover .tooltip::before {
+    background: #61dbfb;
+    color: #333;
+}
+
+.scssBrand:hover .spanIcon,
+.scssBrand:hover .tooltip,
+.scssBrand:hover .tooltip::before {
+    background: #cc6699;
+}
