@@ -1,7 +1,7 @@
 const About = () => {
     return (
-        <section id="about" className="h-full mb-10 z-10">
-            <h2>About Me</h2>
+        <section id="about" className="h-full mb-20">
+            <h1 className="text-center text-4xl mb-10">About Me</h1>
             <div>
                 {/* As a Junior Front-End Developer, I possess an impressive arsenal
                 of skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I
@@ -12,7 +12,7 @@ const About = () => {
                 techniques. I am also a team player who thrives in collaborating
                 with cross-functional teams to produce outstanding web
                 applications. */}
-                <p>
+                <p className="text-md">
                     I&apos;m on a journey to refine my skills and make a mark in
                     the digital world. With a solid foundation in HTML, CSS, and
                     JavaScript, TypeScript and frameworks like React, Next,
@@ -24,6 +24,7 @@ const About = () => {
                                 crafting visually stunning and user-friendly
                                 websites */}
                 </p>
+                <br />
                 <p>
                     In this portfolio, you&apos;ll find a collection of my work
                     that highlights my dedication to creating clean and
