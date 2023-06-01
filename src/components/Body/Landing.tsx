@@ -2,7 +2,6 @@ import TechStackBadge from "@components/Body/TechStackBadge";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Landing.module.css";
-import { nextLogo } from "@utils/fa-assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faLinkedin,
@@ -17,7 +16,7 @@ import TechImageBadge from "@components/Body/TechImageBadge";
 
 const Landing = () => {
     return (
-        <div className="container flex flex-col justify-center">
+        <div className="container flex flex-col justify-center mb-20">
             <section
                 id="landing"
                 className=" flex items-center gap-10 justify-center relative h-[22rem] content text-black z-10"
@@ -34,6 +33,7 @@ const Landing = () => {
                         <p className="text-lg">
                             A passionate and ambitious front-end developer based
                             in Adelaide, Australia 🇦🇺
+                            <span></span>
                         </p>
                     </h2>
                     <section className="flex -mt-3 gap-5 w-[18rem]">
