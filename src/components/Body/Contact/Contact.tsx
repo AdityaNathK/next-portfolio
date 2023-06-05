@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 // import styles from "./Contact.module.css";
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
     const serverID: string = process.env.EMAILJS_SERVER_ID ?? "";
     const templateID: string = process.env.EMAILJS_TEMPLATE_ID ?? "";
@@ -12,13 +13,15 @@ const Contact = () => {
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (form.current) {
+        if (form.current !== null) {
             emailjs
                 .sendForm(serverID, templateID, form.current, publicKey)
                 .then(
                     (result) => {
                         console.log(result.text);
                         console.log("Message Sent");
+                        setIsFormSubmitted(true); // Set the form submitted state to true
+                        form.current?.reset(); // Reset the form fields
                     },
                     (error) => {
                         console.log(error.text);
@@ -44,6 +47,7 @@ const Contact = () => {
             <h1 className="text-center text-4xl mb-10 font-semibold">
                 Contact Me
             </h1>
+
             <form ref={form} onSubmit={sendEmail} className={`${container} `}>
                 <label className={labelStyles}>Name</label>
                 <input className={inputStyles} type="text" name="user_name" />
