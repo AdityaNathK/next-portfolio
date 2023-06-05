@@ -32,7 +32,7 @@ const TechStackBadge = (props: BadgeProps) => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={`${styles.icon} ${brandStyles}`}>
+            <div className={`${styles.icon} ${brandStyles} font-medium`}>
                 <div className={`${styles.tooltip}`}>{tooltip}</div>
                 <span className={`${styles.spanIcon}`}>
                     <FontAwesomeIcon

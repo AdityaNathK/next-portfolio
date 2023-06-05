@@ -1,12 +1,15 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Fira_Code } from "next/font/google";
+import { Rajdhani } from "next/font/google";
 
-const firaCode = Fira_Code({ subsets: ["latin"] });
+const rajdhani = Rajdhani({
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700"],
+});
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-        <main className={firaCode.className}>
+        <main className={rajdhani.className}>
             <Component {...pageProps} />;
         </main>
     );

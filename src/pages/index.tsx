@@ -1,11 +1,11 @@
 import Navigation from "@components/Header/Navigation";
 import About from "@components/Body/About";
-import Contact from "@components/Body/Contact";
+import Contact from "@components/Body/Contact/Contact";
 import Projects from "@components/Body/Projects";
-import Landing from "@components/Body/Landing";
-import Construction from "@components/Construction";
+import Landing from "@components/Body/Landing/Landing";
+import Construction from "@components/UnderConstruction/UnderConstruction";
 
-const pageSwitch = false;
+const pageSwitch = true;
 
 export default function Home() {
     return (

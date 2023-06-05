@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Construction.module.css";
+import styles from "./UnderConstruction.module.css";
 const Construction = () => {
     return (
         <div className={styles.bodyMain}>
