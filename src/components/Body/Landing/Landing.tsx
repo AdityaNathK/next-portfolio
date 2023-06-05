@@ -1,4 +1,4 @@
-import TechStackBadge from "@components/Body/TechStackBadge";
+import TechStackBadge from "@components/Body/TechBadge/TechStackBadge";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Landing.module.css";
@@ -12,7 +12,7 @@ import {
     faReact,
     faSass,
 } from "@fortawesome/free-brands-svg-icons";
-import TechImageBadge from "@components/Body/TechImageBadge";
+import TechImageBadge from "@components/Body/TechBadge/TechImageBadge";
 
 const Landing = () => {
     return (
@@ -30,9 +30,10 @@ const Landing = () => {
                             </span>
                         </p>
                         <br />
-                        <p className="text-lg">
-                            A passionate and ambitious front-end developer based
-                            in Adelaide, Australia 🇦🇺
+                        <p className="text-lg font-medium">
+                            A passionate and ambitious front-end developer
+                            <br />
+                            based in Adelaide, Australia 🇦🇺
                             <span></span>
                         </p>
                     </h2>
@@ -70,8 +71,8 @@ const Landing = () => {
             <section
                 className={`${styles.activeSpan} flex mr-auto items-center `}
             >
-                <h3 className="text-xl pr-5">Tech Stack</h3>
-                <div className="flex gap-2 items-center">
+                <h3 className="text-xl pr-5 font-medium">Tech Stack</h3>
+                <div className="flex gap-3 items-center">
                     <span className="text-2xl">|</span>
                     <TechStackBadge
                         tooltip="HTML"

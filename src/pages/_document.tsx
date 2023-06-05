@@ -10,8 +10,8 @@ export default function Document() {
                 ></script>
             </Head>
             <body>
-                {/* <div className="main"></div>
-                <div className="gradient" /> */}
+                <div className="main"></div>
+                <div className="gradient"></div>
                 <Main />
                 <NextScript />
             </body>

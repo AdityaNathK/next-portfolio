@@ -110,7 +110,7 @@
 .reactBrand:hover .tooltip,
 .reactBrand:hover .tooltip::before {
     background: #61dbfb;
-    color: #333;
+    color: #fff;
 }
 
 .scssBrand:hover .spanIcon,
