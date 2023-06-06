@@ -21,23 +21,34 @@ const Landing = () => {
                 id="landing"
                 className=" flex items-center gap-10 justify-center relative h-[22rem] content text-black z-10"
             >
-                <section>
-                    <h2 className="text-2xl w-[40rem] my-10">
+                <div className={`${styles.box}`}>
+                    <div className={styles.content}>
+                        <Image
+                            className={styles.profileImage}
+                            src="/assets/images/profile.gif"
+                            alt="Profile image"
+                            width={50}
+                            height={50}
+                        />
+                    </div>
+                </div>
+                <section className="">
+                    <h2 className="text-2xl w-[40rem] my-10 text-right">
                         <p className="text-4xl -mb-2">
                             Hi I&apos;m
                             <span className="px-2 mx-3 bg-red-400 font-semibold text-slate-100">
                                 Aditya Nath
                             </span>
                         </p>
-                        <br />
-                        <p className="text-lg font-medium">
-                            A passionate and ambitious front-end developer
-                            <br />
-                            based in Adelaide, Australia 🇦🇺
-                            <span></span>
-                        </p>
                     </h2>
-                    <section className="flex -mt-3 gap-5 w-[18rem]">
+                    <br />
+                    <p className="text-lg font-medium text-right">
+                        A passionate and ambitious front-end developer
+                        <br />
+                        based in Adelaide, Australia 🇦🇺
+                        <span></span>
+                    </p>
+                    <section className="flex gap-5 w-full justify-end mt-5">
                         <Link
                             href="https://github.com/AdityaNathK"
                             target="_blank"
@@ -55,21 +66,9 @@ const Landing = () => {
                         </Link>
                     </section>
                 </section>
-
-                <div className={`${styles.box}`}>
-                    <div className={styles.content}>
-                        <Image
-                            className={styles.profileImage}
-                            src="/assets/images/profile.gif"
-                            alt="Profile image"
-                            width={50}
-                            height={50}
-                        />
-                    </div>
-                </div>
             </section>
             <section
-                className={`${styles.activeSpan} flex mr-auto items-center `}
+                className={`${styles.activeSpan} flex mt-5 items-center justify-center`}
             >
                 <h3 className="text-xl pr-5 font-medium">Tech Stack</h3>
                 <div className="flex gap-3 items-center">
