@@ -42,11 +42,14 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className={`h-full z-10 relative w-full px-50 py-50 backdrop-blur bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)] `}
+            className={`h-full z-10 relative w-full px-5 py-5 backdrop-blur bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)] `}
         >
-            <h1 className="text-center text-4xl mb-10 font-semibold headingClass">
+            <h1 className="text-center text-4xl mb-5 font-semibold headingClass">
                 Contact Me
             </h1>
+            <p className="text-center text-xl mb-5 font-medium">
+                Don&apos;t be shy! Hit me up! 👇
+            </p>
 
             <form ref={form} onSubmit={sendEmail} className={`${container} `}>
                 <label className={labelStyles}>Full Name</label>

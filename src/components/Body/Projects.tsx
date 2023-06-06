@@ -1,11 +1,11 @@
 import Construction from "@components/UnderConstruction/UnderConstruction";
 
 const maskContent = true;
-const Projects = () => {
+const Portfolio = () => {
     return (
         <div>
             {maskContent ? (
-                <section id="projects" className="h-full mb-10">
+                <section id="portfolio" className="h-full mb-10">
                     <h1 className="text-center text-4xl mb-10 font-semibold headingClass">
                         Portfolio
                     </h1>
@@ -31,4 +31,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default Portfolio;
