@@ -2,7 +2,7 @@
     position: relative;
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -10,20 +10,23 @@
 .box::before {
     content: "";
     position: absolute;
-    inset: -10px 70px;
+    inset: -40px 100px;
     background: linear-gradient(
         315deg,
         hsla(256, 96%, 67%, 0.9),
         hsla(354, 98%, 61%, 0.7),
+        hsla(100, 90%, 20%, 0.8),
         hsla(354, 50%, 61%, 0.8),
-        hsla(256, 56%, 57%, 0.8)
+        hsla(256, 96%, 67%, 0.9),
+        hsla(200, 25%, 33%, 0.9),
+        hsla(354, 50%, 61%, 0.8)
     );
     transition: 0.5s;
     animation: profile 10s linear infinite;
 }
 
 .box:hover:before {
-    inset: -20px 0px;
+    inset: -40px 0px;
 }
 
 @keyframes profile {
@@ -38,15 +41,15 @@
 .box::after {
     content: "";
     position: absolute;
-    inset: 3px;
-    border-radius: 50%;
+    inset: 4px;
+    border-radius: 20px;
     z-index: 1;
 }
 .content {
     position: absolute;
     inset: 3px;
     z-index: 3;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: hidden;
 }
 
