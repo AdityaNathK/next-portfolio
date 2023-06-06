@@ -6,10 +6,11 @@ type BadgeProps = {
     tooltip: string;
     iconSrc: IconProp;
     styleClass: string;
+    isSocial: boolean;
 };
 
 const TechStackBadge = (props: BadgeProps) => {
-    const { tooltip, iconSrc, styleClass } = props;
+    const { tooltip, iconSrc, styleClass, isSocial } = props;
     let brandStyles;
 
     switch (styleClass) {
@@ -28,12 +29,22 @@ const TechStackBadge = (props: BadgeProps) => {
         case "scssBrand":
             brandStyles = styles.scssBrand;
             break;
+        case "linkedInBrand":
+            brandStyles = styles.linkedInBrand;
+            break;
+        case "githubBrand":
+            brandStyles = styles.githubBrand;
+            break;
     }
 
     return (
         <div className={styles.wrapper}>
             <div className={`${styles.icon} ${brandStyles} font-medium`}>
-                <div className={`${styles.tooltip}`}>{tooltip}</div>
+                {isSocial ? (
+                    ""
+                ) : (
+                    <div className={`${styles.tooltip}`}>{tooltip}</div>
+                )}
                 <span className={`${styles.spanIcon}`}>
                     <FontAwesomeIcon
                         className={`${styles.iconStyles} ${brandStyles}`}

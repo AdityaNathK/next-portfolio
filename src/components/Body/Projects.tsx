@@ -1,20 +1,29 @@
 import Construction from "@components/UnderConstruction/UnderConstruction";
 
 const maskContent = true;
-const Projects = () => {
+const Portfolio = () => {
     return (
         <div>
             {maskContent ? (
-                <section id="projects" className="h-full mb-10">
-                    <h1 className="text-center text-4xl mb-10 font-semibold">
+                <section id="portfolio" className="h-full mb-10">
+                    <h1 className="text-center text-4xl mb-10 font-semibold headingClass">
                         Portfolio
                     </h1>
-                    <Construction />
+                    <p className="text-lg font-normal mb-10">
+                        In this portfolio, you&apos;ll find a collection of my
+                        work that highlights my dedication to creating clean and
+                        intuitive user interfaces. From responsive designs to
+                        interactive elements, each project represents my
+                        continuous learning and growth as a front-end developer.
+                    </p>
+                    <div className="h-[400px]">
+                        <Construction />
+                    </div>
                 </section>
             ) : (
                 <section id="projects" className="h-96 mb-20">
                     <>
-                        <p>Each project is a unique piece of development 🧩</p>
+                        <p>Each project is a unique piece of development</p>
                     </>
                 </section>
             )}
@@ -22,4 +31,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default Portfolio;

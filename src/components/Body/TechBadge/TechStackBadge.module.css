@@ -51,6 +51,14 @@
     color: #cc6699;
 }
 
+.githubBrand {
+    color: #333333;
+}
+
+.linkedInBrand {
+    color: #0072b1;
+}
+
 .tooltip {
     position: absolute;
     top: 0px;
@@ -117,4 +125,16 @@
 .scssBrand:hover .tooltip,
 .scssBrand:hover .tooltip::before {
     background: #cc6699;
+}
+
+.githubBrand:hover .spanIcon,
+.githubBrand:hover .tooltip,
+.githubBrand:hover .tooltip::before {
+    background: #333333;
+}
+
+.linkedInBrand:hover .spanIcon,
+.linkedInBrand:hover .tooltip,
+.linkedInBrand:hover .tooltip::before {
+    background: #0072b1;
 }

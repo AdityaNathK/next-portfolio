@@ -22,24 +22,15 @@ const About = () => {
                 techniques. I am also a team player who thrives in collaborating
                 with cross-functional teams to produce outstanding web
                 applications. */}
-                <p
-                    className={`${inter.className} text-base text-justify font-small`}
-                >
+                <p className={` text-justify text-lg font-normal`}>
                     I&apos;m on a journey to refine my skills and make a mark in
-                    the digital world. With a solid foundation in HTML, CSS, and
-                    JavaScript, TypeScript and frameworks like React, Next,
-                    Tailwind, and SCSS, I&apos;m eager to showcase my projects
-                    and demonstrate my potential.&nbsp;
-                    {/* I loves to bring ideas to life through
-                                captivating interfaces. With a blend of artistic
-                                flair and technical expertise, I specialize in
-                                crafting visually stunning and user-friendly
-                                websites */}
-                    In this portfolio, you&apos;ll find a collection of my work
-                    that highlights my dedication to creating clean and
-                    intuitive user interfaces. From responsive designs to
-                    interactive elements, each project represents my continuous
-                    learning and growth as a front-end developer.
+                    the digital world. I loves to bring ideas to life through
+                    captivating interfaces. With a blend of artistic flair and
+                    technical expertise, I specialize in crafting visually
+                    stunning and user-friendly websites With a solid foundation
+                    in HTML, CSS, and JavaScript, TypeScript and frameworks like
+                    React, Next, Tailwind, and SCSS, I&apos;m eager to showcase
+                    my projects and demonstrate my potential.&nbsp;
                 </p>
             </div>
         </section>

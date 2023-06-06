@@ -1,0 +1,55 @@
+.support {
+    position: fixed;
+    background: #000;
+    padding: 5px;
+    border-radius: 10px;
+    right: 50px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+.support:hover {
+    cursor: pointer;
+    transform: rotate(10deg) scale(1);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.githubCorner:hover .octoFace {
+    display: inline;
+}
+
+.githubCorner .octoFace {
+    display: none;
+}
+
+.githubCorner:hover .octoArm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .githubCorner:hover .octoArm {
+        animation: none;
+    }
+
+    .githubCorner .octoArm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
