@@ -30,6 +30,29 @@ html {
     scroll-padding-top: 100px;
 }
 
+#blob {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, blue, pink, purple, green);
+    animation: rotate 20s infinite;
+    filter: blur(100px);
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
 .app {
     position: relative;
     z-index: 10;

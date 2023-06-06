@@ -9,12 +9,14 @@ const Projects = () => {
                     <h1 className="text-center text-4xl mb-10 font-semibold">
                         Portfolio
                     </h1>
-                    <Construction />
+                    <div className="h-[400px]">
+                        <Construction />
+                    </div>
                 </section>
             ) : (
                 <section id="projects" className="h-96 mb-20">
                     <>
-                        <p>Each project is a unique piece of development 🧩</p>
+                        <p>Each project is a unique piece of development</p>
                     </>
                 </section>
             )}
