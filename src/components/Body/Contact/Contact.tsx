@@ -37,12 +37,12 @@ const Contact = () => {
     const textAreaStyles = "mb-8 px-2 py-2 border border-solid border-black";
 
     const submitBtnStyles =
-        "px-20 py-2 bg-orange-600 text-white border-none cursor-pointer mx-auto rounded";
+        "px-20 py-2 bg-orange-600 text-white border-none cursor-pointer mx-auto rounded mb-10";
 
     return (
         <section
             id="contact"
-            className={`h-full z-10 relative w-full px-50 py-50 backdrop-opacity-10 bg-black/30  shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)]`}
+            className={`h-full z-10 relative w-full px-50 py-50 backdrop-opacity-50 bg-purple-200/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)]`}
         >
             <h1 className="text-center text-4xl mb-10 font-semibold">
                 Contact Me
