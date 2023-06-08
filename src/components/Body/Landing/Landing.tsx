@@ -25,7 +25,7 @@ const Landing = () => {
                     <div className={styles.content}>
                         <Image
                             className={styles.profileImage}
-                            src="/assets/images/profile.gif"
+                            src="/assets/images/profile.jpg"
                             alt="Profile image"
                             width={50}
                             height={50}
