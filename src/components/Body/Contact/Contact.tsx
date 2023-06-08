@@ -6,9 +6,10 @@ const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
-    const serverID: string = process.env.EMAILJS_SERVER_ID ?? "";
-    const templateID: string = process.env.EMAILJS_TEMPLATE_ID ?? "";
-    const publicKey: string = process.env.EMAILJS_PUBLIC_KEY ?? "";
+    const serverID: string = process.env.NEXT_PUBLIC_EMAILJS_SERVER_ID ?? "";
+    const templateID: string =
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
+    const publicKey: string = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
