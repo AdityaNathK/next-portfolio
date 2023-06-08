@@ -25,10 +25,10 @@ const Landing = () => {
                     <div className={styles.content}>
                         <Image
                             className={styles.profileImage}
-                            src="/assets/images/profile.jpg"
+                            src="/assets/images/profile-image.jpg"
                             alt="Profile image"
-                            width={50}
-                            height={50}
+                            width={600}
+                            height={600}
                         />
                     </div>
                 </div>
