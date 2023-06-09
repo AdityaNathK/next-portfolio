@@ -19,7 +19,7 @@ const Landing = () => {
         <div className="container flex flex-col justify-center mb-20">
             <section
                 id="landing"
-                className=" flex items-center gap-10 justify-center relative h-[22rem] content text-black z-10"
+                className=" flex items-center gap-10 justify-between relative content text-black z-10 mb-[30px]"
             >
                 <div className={`${styles.box}`}>
                     <div className={styles.content}>
@@ -32,11 +32,11 @@ const Landing = () => {
                         />
                     </div>
                 </div>
-                <section className="">
-                    <h2 className="text-2xl w-[40rem] my-10 text-right">
-                        <p className="text-4xl -mb-2">
-                            Hi I&apos;m
-                            <span className="px-2 mx-3 bg-red-400 font-semibold text-slate-100 hover:bg-transparent hover:text-red-400">
+                <section className="flex flex-col justify-between self-center">
+                    <h2 className="text-2xl my-2 text-right">
+                        <p className="text-4xl">
+                            Hi I&apos;m&nbsp;
+                            <span className="px-2 bg-red-400 font-semibold text-slate-100 hover:bg-transparent hover:text-red-400">
                                 Aditya Nath
                             </span>
                         </p>
@@ -68,7 +68,7 @@ const Landing = () => {
                 </section>
             </section>
             <section
-                className={`${styles.activeSpan} flex mt-5 items-center justify-center`}
+                className={`${styles.activeSpan} flex items-center justify-center`}
             >
                 <h3 className="text-xl pr-5 font-medium">Tech Stack</h3>
                 <div className="flex gap-3 items-center">

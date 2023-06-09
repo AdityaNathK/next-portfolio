@@ -4,13 +4,12 @@
     height: 250px;
     border-radius: 20px;
     overflow: hidden;
-    cursor: pointer;
 }
 
-.box::before {
-    content: "";
+/* .box::before { */
+/* content: "";
     position: absolute;
-    inset: -40px 100px;
+    inset: -40px 110px;
     background: linear-gradient(
         315deg,
         hsla(256, 96%, 67%, 0.9),
@@ -36,15 +35,15 @@
     0% {
         transform: rotate(360deg);
     }
-}
+} */
 
-.box::after {
+/* .box::after {
     content: "";
     position: absolute;
     inset: 4px;
-    border-radius: 20px;
+    border-radius: 30px;
     z-index: 1;
-}
+} */
 .content {
     position: absolute;
     inset: 3px;

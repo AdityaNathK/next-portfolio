@@ -28,30 +28,25 @@ export default function Home() {
 
     return (
         <div>
-            {pageSwitch ? (
-                <GithubCat />
-            ) : (
-                <div className="h-[100]">
-                    <div
-                        id="blob"
-                        style={{
-                            position: "absolute",
-                            left: position.x,
-                            top: position.y,
-                        }}
-                    ></div>
-                    <Navigation />
-                    <div className="flex flex-col">
-                        <div className="z-10 flex flex-col h-full max-w-5xl px-10 mr-auto ml-auto">
-                            <Landing />
-                            <About />
-                            <Projects />
-                            <Contact />
-                        </div>
-                    </div>
-                    <Footer />
+            <div className="">
+                {/* <div
+                    id="blob"
+                    style={{
+                        position: "absolute",
+                        left: position.x,
+                        top: position.y,
+                    }}
+                ></div> */}
+                <Navigation />
+                <div className="mainBody">
+                    <Landing />
+                    <About />
+                    <Projects />
+                    <Contact />
                 </div>
-            )}
+
+                <Footer />
+            </div>
         </div>
     );
 }
