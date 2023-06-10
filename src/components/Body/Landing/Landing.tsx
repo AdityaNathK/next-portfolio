@@ -13,10 +13,11 @@ import {
     faSass,
 } from "@fortawesome/free-brands-svg-icons";
 import TechImageBadge from "@components/Body/TechBadge/TechImageBadge";
+import IsoTechStack from "@components/IsoTechStack/IsoTechStack";
 
 const Landing = () => {
     return (
-        <div className="container flex flex-col justify-center mb-20">
+        <div className="container flex flex-col justify-center mb-20 mainBody">
             <section
                 id="landing"
                 className=" flex items-center gap-10 justify-between relative content text-black z-10 mb-[30px]"
@@ -67,7 +68,7 @@ const Landing = () => {
                     </section>
                 </section>
             </section>
-            <section
+            {/* <section
                 className={`${styles.activeSpan} flex items-center justify-center`}
             >
                 <h3 className="text-xl pr-5 font-medium">Tech Stack</h3>
@@ -115,7 +116,7 @@ const Landing = () => {
                     <TechImageBadge tooltip="TypeScript" styleClass="tsBrand" />
                 </div>
                 <div>&nbsp;</div>
-            </section>
+            </section> */}
         </div>
     );
 };

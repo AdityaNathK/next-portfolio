@@ -5,11 +5,8 @@ import About from "@components/Body/About";
 import Contact from "@components/Body/Contact/Contact";
 import Projects from "@components/Body/Projects";
 import Landing from "@components/Body/Landing/Landing";
-import Construction from "@components/UnderConstruction/UnderConstruction";
 import Footer from "@components/Footer/Footer";
-import GithubCat from "@components/GithubCat/GithubCat";
-
-const pageSwitch = false;
+import IsoTechStack from "@components/IsoTechStack/IsoTechStack";
 
 export default function Home() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -26,10 +23,17 @@ export default function Home() {
         };
     }, []);
 
+    const pageSwitch = false;
+
     return (
         <div>
-            <div className="">
-                {/* <div
+            {pageSwitch ? (
+                <div className="flex flex-col justify-center items-center align-center vertical-center py-32 bg-slate-600">
+                    <IsoTechStack />
+                </div>
+            ) : (
+                <div className="">
+                    {/* <div
                     id="blob"
                     style={{
                         position: "absolute",
@@ -37,16 +41,17 @@ export default function Home() {
                         top: position.y,
                     }}
                 ></div> */}
-                <Navigation />
-                <div className="mainBody">
+                    <Navigation />
                     <Landing />
-                    <About />
+                    <div className="bg-slate-600 z-20 relative py-[50px]">
+                        <About />
+                    </div>
                     <Projects />
                     <Contact />
-                </div>
 
-                <Footer />
-            </div>
+                    <Footer />
+                </div>
+            )}
         </div>
     );
 }

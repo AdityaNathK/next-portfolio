@@ -1,3 +1,4 @@
+import IsoTechStack from "@components/IsoTechStack/IsoTechStack";
 import { Inter, Roboto } from "next/font/google";
 const inter = Inter({
     subsets: ["latin"],
@@ -6,23 +7,22 @@ const inter = Inter({
 
 const About = () => {
     return (
-        <section id="about" className="h-full mb-20">
+        <section id="about" className="h-full mb-20 mainBody ">
             <h1
-                className={`text-center text-4xl mb-10 font-semibold headingClass`}
+                className={`text-right text-4xl mb-10 font-semibold headingClass`}
             >
                 About Me
             </h1>
-            <div>
-                {/* As a Junior Front-End Developer, I possess an impressive arsenal
-                of skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I
-                excel in designing and maintaining responsive websites that
-                offer a smooth user experience. My expertise lies in crafting
-                dynamic, engaging interfaces through writing clean and optimized
-                code and utilizing cutting-edge development tools and
-                techniques. I am also a team player who thrives in collaborating
-                with cross-functional teams to produce outstanding web
-                applications. */}
-                <p className={` text-justify text-lg font-normal`}>
+            <div className="flex flex-row  justify-between ">
+                <section className="relative -top-[50px] ">
+                    <h2 className="text-white relative -top-10 text-lg font-medium">
+                        Tech Stack
+                    </h2>
+                    <IsoTechStack />
+                </section>
+                <p
+                    className={` text-justify text-lg font-normal text-white max-w-[60%]`}
+                >
                     I&apos;m on a journey to refine my skills and make a mark in
                     the digital world. I loves to bring ideas to life through
                     captivating interfaces. With a blend of artistic flair and

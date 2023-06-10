@@ -1,0 +1,191 @@
+.rootClass {
+    animation: floating 2s infinite ease-in-out alternate;
+}
+
+.rootClass:hover {
+    animation: none;
+}
+
+/* @keyframes floating {
+    100% {
+        transform: translateY(10px);
+    }
+} */
+
+.listClass {
+    --stack-color: #555252;
+
+    color: white;
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+.topStack {
+    position: relative;
+    list-style: none;
+    width: 100px;
+    background: var(--stack-color);
+    margin: 1px;
+    padding: 5px;
+    transition: 0.5s;
+    z-index: calc(1 * var(--i));
+}
+
+.topStack:hover {
+    transform: translate(-30px);
+    background: var(--clr);
+}
+
+.topStack::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: var(--stack-color);
+    filter: brightness(0.7);
+    transform-origin: right;
+    transform: skewY(45deg);
+    /* transition: 0.5s; */
+}
+
+.topStack:hover::before {
+    background: var(--clr);
+    filter: brightness(0.7);
+}
+
+.topStack::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: var(--stack-color);
+    filter: brightness(0.9);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+
+.topStack:hover::after {
+    border: 3px solid var(--clr);
+    background: var(--clr);
+    filter: brightness(0.9);
+}
+
+.textClass {
+    text-decoration: none;
+    text-shadow: var(--shadow);
+    color: var(--clr);
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.topStack:hover .textClass {
+    color: #fff;
+}
+
+.topStack:last-child::after {
+    box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+}
+
+.spanClass {
+    position: absolute;
+    padding: 3px;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: var(--stack-color);
+    filter: brightness(0.7);
+    transform-origin: right;
+    transform: skewY(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.topStack:hover .spanClass {
+    opacity: 1;
+    background: var(--clr);
+}
+
+.spanImage {
+    height: 100%;
+    width: 100%;
+    background-image: var(--image);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.topStack:hover .spanImage {
+    background-image: var(--image-light);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flutter {
+    --i: 9;
+    --clr: #42a5f5;
+    --image: url("/assets/images/fa-flutter-dark.svg");
+    --image-light: url("/assets/images/fa-flutter.svg");
+}
+
+.nextjs {
+    --i: 8;
+    --clr: #333333;
+    --image: url("/assets/images/fa-next-dark.svg");
+    --image-light: url("/assets/images/fa-next.svg");
+}
+
+.reactjs {
+    --i: 7;
+    --clr: #61dbfb;
+    --image: url("/assets/images/fa-react-dark.svg");
+    --image-light: url("/assets/images/fa-react.svg");
+}
+.ts {
+    --i: 6;
+    --clr: #235a97;
+    --image: url("/assets/images/fa-typescript-dark.svg");
+    --image-light: url("/assets/images/fa-typescript.svg");
+}
+.js {
+    --i: 5;
+    --clr: #f0db4f;
+    --image: url("/assets/images/fa-js-dark.svg");
+    --image-light: url("/assets/images/fa-js.svg");
+    --shadow: #b9ad5c 1px 1px;
+}
+
+.scss {
+    --i: 4;
+    --clr: #cc6699;
+    --image: url("/assets/images/fa-scss-dark.svg");
+    --image-light: url("/assets/images/fa-scss.svg");
+}
+
+.tailwind {
+    --i: 3;
+    --clr: #06b6d4;
+    --image: url("/assets/images/fa-tailwind-dark.svg");
+    --image-light: url("/assets/images/fa-tailwind.svg");
+}
+
+.css {
+    --i: 2;
+    --clr: #2965f1;
+    --image: url("/assets/images/fa-css-dark.svg");
+    --image-light: url("/assets/images/fa-css.svg");
+}
+
+.html {
+    --i: 1;
+    --clr: #e34c26;
+    --image: url("/assets/images/fa-html-dark.svg");
+    --image-light: url("/assets/images/fa-html.svg");
+}
