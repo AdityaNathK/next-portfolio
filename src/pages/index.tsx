@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Navigation from "@components/Header/Navigation";
-import About from "@components/Body/About";
+import About from "@components/Body/About/About";
 import Contact from "@components/Body/Contact/Contact";
 import Projects from "@components/Body/Projects";
 import Landing from "@components/Body/Landing/Landing";
@@ -43,7 +43,7 @@ export default function Home() {
                 ></div> */}
                     <Navigation />
                     <Landing />
-                    <div className="bg-slate-600 z-20 relative py-[50px]">
+                    <div className="z-20 relative py-[50px]">
                         <About />
                     </div>
                     <Projects />

@@ -49,7 +49,7 @@ const Navigation = () => {
             <header
                 className={`${
                     isScrolled ? "bg-white shadow-md" : ""
-                } sticky top-0 z-30 navHeader flex justify-between items-center w-full mb-10 pt-[15px] pb-[15px] px-[9rem] font-semibold text-lg`}
+                } sticky top-0 z-30 navHeader flex justify-between items-center w-full pt-[15px] pb-[15px] px-[9rem] font-semibold text-lg`}
             >
                 <div>
                     <GithubCat />

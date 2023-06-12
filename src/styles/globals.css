@@ -117,7 +117,7 @@ html {
         radial-gradient(at 32% 96%, hsla(0, 60%, 74%, 1) 0px, transparent 50%),
         radial-gradient(at 33% 50%, hsla(210, 67%, 73%, 1) 0px, transparent 50%),
         radial-gradient(at 12% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
-    position: absolute;
+    position: fixed;
     content: "";
     width: 100%;
     filter: blur(100px) saturate(150%);
