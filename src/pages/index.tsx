@@ -7,6 +7,7 @@ import Projects from "@components/Body/Projects";
 import Landing from "@components/Body/Landing/Landing";
 import Footer from "@components/Footer/Footer";
 import IsoTechStack from "@components/IsoTechStack/IsoTechStack";
+import ScrollIndicator from "@components/ScrollIndicator/ScrollIndicator";
 
 export default function Home() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -28,9 +29,7 @@ export default function Home() {
     return (
         <div>
             {pageSwitch ? (
-                <div className="flex flex-col justify-center items-center align-center vertical-center py-32 bg-slate-600">
-                    <IsoTechStack />
-                </div>
+                <ScrollIndicator />
             ) : (
                 <div className="">
                     {/* <div
@@ -43,7 +42,7 @@ export default function Home() {
                 ></div> */}
                     <Navigation />
                     <Landing />
-                    <div className="z-20 relative py-[50px]">
+                    <div className="z-20 relative">
                         <About />
                     </div>
                     <Projects />

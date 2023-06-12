@@ -43,6 +43,9 @@ const Navigation = () => {
             setIsScrolled(!isTop);
         };
         window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
     return (
         <>

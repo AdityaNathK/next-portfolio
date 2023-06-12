@@ -1,0 +1,34 @@
+/*Indicator*/
+.indicator {
+    position: relative;
+}
+
+.down {
+    font-size: 25pt;
+    position: absolute;
+    animation: opacity 2s infinite;
+    left: -10px;
+    opacity: 0.25;
+    color: #333;
+}
+
+.down:nth-child(2) {
+    top: 15px;
+    animation-delay: 0.25s;
+}
+
+/*animation*/
+@keyframes opacity {
+    0% {
+        opacity: 0.25;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}

@@ -9,7 +9,7 @@ const inter = Inter({
 const About = () => {
     return (
         <section id="about" className="h-full mb-20 mainBody ">
-            <div className="flex flex-row gap-[10%] ">
+            <div className="grid grid-cols-2 items-center place-items-center">
                 <section className="flex align-center ">
                     <div className={`${styles.box}`}>
                         <Image
@@ -21,7 +21,7 @@ const About = () => {
                         />
                     </div>
                 </section>
-                <div className="flex  flex-col align-center ">
+                <div className="flex  flex-col align-center">
                     <h1
                         className={`text-left text-4xl mb-10 font-semibold headingClass w-full`}
                     >

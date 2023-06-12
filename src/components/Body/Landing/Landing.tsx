@@ -1,24 +1,24 @@
-import TechStackBadge from "@components/Body/TechBadge/TechStackBadge";
-import Image from "next/image";
 import Link from "next/link";
-import styles from "./Landing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faLinkedin,
-    faGithub,
-    faHtml5,
-    faCss3Alt,
-    faJs,
-    faReact,
-    faSass,
-} from "@fortawesome/free-brands-svg-icons";
-import TechImageBadge from "@components/Body/TechBadge/TechImageBadge";
-import IsoTechStack from "@components/IsoTechStack/IsoTechStack";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import ScrollIndicator from "@components/ScrollIndicator/ScrollIndicator";
+import { useEffect, useState } from "react";
 
 const Landing = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const isTop = window.scrollY < 45;
+            setIsScrolled(!isTop);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <div className="flex flex-col justify-center mainBody relative h-[85vh] ">
-            <section className="flex flex-col justify-between self-center">
+        <div className="flex flex-col justify-center mainBody relative h-[95vh] items-center">
+            <section className="flex flex-col justify-between self-center relative -top-24">
                 <h2 className="text-2xl my-2">
                     <p className="text-5xl text-center">
                         Hi I&apos;m&nbsp;
@@ -49,6 +49,13 @@ const Landing = () => {
                     </Link>
                 </section>
             </section>
+            {isScrolled ? (
+                ""
+            ) : (
+                <div className="relative top-48">
+                    <ScrollIndicator />
+                </div>
+            )}
 
             {/* <section
                 className={`${styles.activeSpan} flex items-center justify-center`}
