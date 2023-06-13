@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+    faLinkedin,
+    faGithub,
+    faNpm,
+} from "@fortawesome/free-brands-svg-icons";
 import ScrollIndicator from "@components/ScrollIndicator/ScrollIndicator";
 import { useEffect, useState } from "react";
 
@@ -41,10 +45,22 @@ const Landing = () => {
                             icon={faGithub}
                         />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/aditya-nath-kalla/">
+                    <Link
+                        href="https://www.linkedin.com/in/aditya-nath-kalla/"
+                        target="_blank"
+                    >
                         <FontAwesomeIcon
                             className={` w-6 h-6 px-2 py-2 bg-[#0072b1] text-white hover:bg-white rounded-[50%] hover:text-[#0072b1]`}
                             icon={faLinkedin}
+                        />
+                    </Link>
+                    <Link
+                        href="https://www.npmjs.com/~adityanath"
+                        target="_blank"
+                    >
+                        <FontAwesomeIcon
+                            className={` w-6 h-6 px-2 py-2 bg-[#cb3837] text-white hover:bg-white rounded-[50%] hover:text-[#cb3837]`}
+                            icon={faNpm}
                         />
                     </Link>
                 </section>
