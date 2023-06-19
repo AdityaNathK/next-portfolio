@@ -91,7 +91,6 @@ html {
     filter: invert(1);
 }
 .mainBody {
-    margin: 0;
     padding: 0 9rem;
     position: relative;
     z-index: 10;

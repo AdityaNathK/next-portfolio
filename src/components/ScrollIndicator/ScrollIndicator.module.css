@@ -1,13 +1,14 @@
 /*Indicator*/
 .indicator {
     position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 .down {
     font-size: 25pt;
     position: absolute;
     animation: opacity 2s infinite;
-    left: -10px;
     opacity: 0.25;
     color: #333;
 }

@@ -21,7 +21,7 @@ const Landing = () => {
         };
     }, []);
     return (
-        <div className="flex flex-col justify-center mainBody relative h-[95vh] items-center">
+        <div className="flex flex-col justify-center mainBody relative h-[95vh] items-center max-w-[1440px] mx-auto">
             <section className="flex flex-col justify-between self-center relative -top-24">
                 <h2 className="text-2xl my-2">
                     <p className="text-5xl text-center">
@@ -32,13 +32,14 @@ const Landing = () => {
                     </p>
                 </h2>
                 <br />
-                <p className="text-2xl font-medium text-center">
-                    A passionate and enthusiastic front-end developer
-                    <br />
-                    based in Adelaide, Australia 🇦🇺
+                <p className="text-2xl font-medium text-center px-24">
+                    I specialize in translating design concepts into functional
+                    responsive websites with a focus on creating engaging and
+                    user-friendly web experiences
+                    <br />I am based in Australia 🇦🇺
                     <span></span>
                 </p>
-                <section className="flex gap-5 w-full mt-5 justify-center">
+                <section className="flex gap-5 w-full mt-14 justify-center">
                     <Link href="https://github.com/AdityaNathK" target="_blank">
                         <FontAwesomeIcon
                             className={` w-6 h-6 px-2 py-2 bg-[#333] text-white hover:bg-white rounded-[50%] hover:text-[#333]`}
@@ -68,9 +69,9 @@ const Landing = () => {
             {isScrolled ? (
                 ""
             ) : (
-                <div className="relative top-48">
+                <a href="#about" className="relative top-[23%]">
                     <ScrollIndicator />
-                </div>
+                </a>
             )}
 
             {/* <section

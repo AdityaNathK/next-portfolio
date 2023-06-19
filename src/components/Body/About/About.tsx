@@ -8,19 +8,11 @@ const inter = Inter({
 
 const About = () => {
     return (
-        <section id="about" className="h-full mb-20 mainBody ">
-            <div className="grid grid-cols-2 items-center place-items-center">
-                <section className="flex align-center ">
-                    <div className={`${styles.box}`}>
-                        <Image
-                            className={styles.profileImage}
-                            src="/assets/images/profile-image.jpg"
-                            alt="Profile image"
-                            width={600}
-                            height={600}
-                        />
-                    </div>
-                </section>
+        <section
+            id="about"
+            className="h-full mb-20 mainBody w-[1440px] mx-auto"
+        >
+            <div className="grid grid-cols-[2fr,1fr] items-center place-items-end">
                 <div className="flex  flex-col align-center">
                     <h1
                         className={`text-left text-4xl mb-10 font-semibold headingClass w-full`}
@@ -41,6 +33,17 @@ const About = () => {
                         demonstrate my potential.&nbsp;
                     </p>
                 </div>
+                <section className="flex align-center ">
+                    <div className={`${styles.box}`}>
+                        <Image
+                            className={styles.profileImage}
+                            src="/assets/images/profile-image.jpg"
+                            alt="Profile image"
+                            width={600}
+                            height={600}
+                        />
+                    </div>
+                </section>
             </div>
         </section>
     );

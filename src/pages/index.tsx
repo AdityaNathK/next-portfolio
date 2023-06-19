@@ -6,8 +6,8 @@ import Contact from "@components/Body/Contact/Contact";
 import Projects from "@components/Body/Projects";
 import Landing from "@components/Body/Landing/Landing";
 import Footer from "@components/Footer/Footer";
-import IsoTechStack from "@components/IsoTechStack/IsoTechStack";
 import ScrollIndicator from "@components/ScrollIndicator/ScrollIndicator";
+import TechStack from "@components/TechStack/TechStack";
 
 export default function Home() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -31,24 +31,16 @@ export default function Home() {
             {pageSwitch ? (
                 <ScrollIndicator />
             ) : (
-                <div className="">
-                    {/* <div
-                    id="blob"
-                    style={{
-                        position: "absolute",
-                        left: position.x,
-                        top: position.y,
-                    }}
-                ></div> */}
-                    <Navigation />
-                    <Landing />
+                <div>
                     <div className="z-20 relative">
+                        <Navigation />
+                        <Landing />
                         <About />
+                        <TechStack />
+                        <Projects />
+                        <Contact />
+                        <Footer />
                     </div>
-                    <Projects />
-                    <Contact />
-
-                    <Footer />
                 </div>
             )}
         </div>

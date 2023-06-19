@@ -2,7 +2,10 @@
 import Link from "next/link";
 import Logo from "@components/Header/Logo";
 import { useRouter } from "next/router";
+import useTheme from "@components/hooks/useTheme";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import GithubCat from "@components/GithubCat/GithubCat";
 
 type NavProps = {
@@ -36,6 +39,7 @@ export const CustomLink = (props: NavProps) => {
     );
 };
 const Navigation = () => {
+    const [mode, toggleMode] = useTheme();
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -52,49 +56,67 @@ const Navigation = () => {
             <header
                 className={`${
                     isScrolled ? "bg-white shadow-md" : ""
-                } sticky top-0 z-30 navHeader flex justify-between items-center w-full pt-[15px] pb-[15px] px-[9rem] font-semibold text-lg`}
+                } sticky top-0 z-30 navHeader`}
             >
-                <div>
-                    <GithubCat />
+                <GithubCat />
+                <div className="flex justify-between items-center max-w-[1440px] mx-auto pt-[15px] pb-[15px] px-[8rem] font-semibold text-lg">
                     <Logo />
+                    <nav className="flex gap-4">
+                        <CustomLink
+                            isButton={false}
+                            href="/"
+                            className=""
+                            title="Home"
+                            onScroll={true}
+                        />
+
+                        <CustomLink
+                            isButton={false}
+                            href="#about"
+                            className=""
+                            title="About"
+                            onScroll={true}
+                        />
+
+                        <CustomLink
+                            isButton={false}
+                            href="#portfolio"
+                            className=""
+                            title="Portfolio"
+                            onScroll={true}
+                        />
+                    </nav>
+                    <nav className="flex flex-row justify-stretch gap-10">
+                        <button
+                            type="button"
+                            className="bg-red-400 text-white rounded hover:bg-white hover:text-black px-2"
+                        >
+                            <CustomLink
+                                isButton={true}
+                                href="#contact"
+                                className=""
+                                title="Contact"
+                                onScroll={true}
+                            />
+                        </button>
+                        <button
+                            onClick={() =>
+                                (
+                                    toggleMode as React.Dispatch<
+                                        React.SetStateAction<string>
+                                    >
+                                )(mode === "light" ? "dark" : "light")
+                            }
+                            className="min-w-[18px]"
+                        >
+                            {mode === "dark" ? (
+                                <FontAwesomeIcon icon={faSun} />
+                            ) : (
+                                <FontAwesomeIcon icon={faMoon} />
+                            )}
+                        </button>
+                    </nav>
                 </div>
-                <nav className="flex gap-4">
-                    <CustomLink
-                        isButton={false}
-                        href="/"
-                        className=""
-                        title="Home"
-                        onScroll={true}
-                    />
-
-                    <CustomLink
-                        isButton={false}
-                        href="#about"
-                        className=""
-                        title="About"
-                        onScroll={true}
-                    />
-
-                    <CustomLink
-                        isButton={false}
-                        href="#portfolio"
-                        className=""
-                        title="Portfolio"
-                        onScroll={true}
-                    />
-                </nav>
-                <button
-                    type="button"
-                    className="bg-red-400 text-white rounded hover:bg-white hover:text-black px-2"
-                >
-                    <CustomLink
-                        isButton={true}
-                        href="#contact"
-                        className=""
-                        title="Contact"
-                        onScroll={true}
-                    />
-                </button>
             </header>
         </>
     );
