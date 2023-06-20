@@ -7,12 +7,12 @@ const Portfolio = () => {
             {maskContent ? (
                 <section
                     id="portfolio"
-                    className="h-full mb-10 contentWidth mainBody"
+                    className="h-full mb-20 contentWidth mainBody"
                 >
-                    <h1 className="text-center text-4xl mb-10 font-semibold headingClass">
+                    <h1 className="text-left text-4xl mb-10 font-semibold headingClass dark:text-sky-400">
                         Portfolio
                     </h1>
-                    <p className="text-lg font-normal mb-10">
+                    <p className="text-lg font-normal mb-10 dark:text-slate-200">
                         In this portfolio, you&apos;ll find a collection of my
                         work that highlights my dedication to creating clean and
                         intuitive user interfaces. From responsive designs to

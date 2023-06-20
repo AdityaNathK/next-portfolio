@@ -8,16 +8,16 @@ const inter = Inter({
 
 const About = () => {
     return (
-        <section id="about" className="h-full mb-20 mainBody contentWidth">
+        <section id="about" className="h-full mainBody mb-20 contentWidth">
             <div className="grid grid-cols-[2fr,1fr] items-center place-items-end">
-                <div className="flex  flex-col align-center">
+                <div className="flex  flex-col align-center ">
                     <h1
-                        className={`text-left text-4xl mb-10 font-semibold headingClass w-full`}
+                        className={`text-left text-4xl mb-10 font-semibold headingClass w-full dark:text-sky-400`}
                     >
                         About Me
                     </h1>
                     <p
-                        className={` items-right text-justify text-lg font-normal text-slate-800 w-full`}
+                        className={` items-right text-justify text-lg font-normal text-slate-800 w-full dark:text-slate-200`}
                     >
                         I&apos;m on a journey to refine my skills and make a
                         mark in the digital world. I loves to bring ideas to

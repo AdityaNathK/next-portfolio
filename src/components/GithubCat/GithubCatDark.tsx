@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./GithubCat.module.css";
+import styles from "./GithubCatDark.module.css";
 
-const GithubCat = () => {
+const GithubCatDark = () => {
     return (
         <a
             target="_blank"
@@ -15,8 +15,8 @@ const GithubCat = () => {
                 height="80"
                 viewBox="0 0 250 250"
                 style={{
-                    fill: "#fff",
-                    color: "#24292e",
+                    fill: "#1b1b1b",
+                    color: "#FFF",
                     position: "fixed",
                     top: 0,
                     border: 0,
@@ -44,7 +44,7 @@ const GithubCat = () => {
                     style={{ transformOrigin: "100px 80px" }}
                 ></path>
                 <path
-                    fill="#fff"
+                    fill="#1e293b"
                     className={styles.octoFace}
                     d="m 66.316586,91.684167 c -3.732719,3.695302 -5.499914,7.911113 -5.109057,12.189823 0.402191,4.40252 2.856545,7.13979 3.598819,7.87463 7.147689,7.07602 16.6566,5.83073 26.774601,-3.5071 1.898425,-1.74974 3.88999,-3.6547 5.918691,-5.66307 2.008923,-1.98876 3.97015,-3.993798 5.8295,-5.960792 11.03287,-11.661932 7.51635,-19.883384 2.62392,-24.726418 -4.74759,-4.699985 -12.64784,-6.925112 -20.588233,0.935666 -0.195089,0.193132 -0.479788,0.515601 -1.17978,1.318428 -1.495895,1.714736 -4.280356,4.904844 -7.250493,7.845202 -3.280289,3.247391 -6.797215,6.325174 -8.899525,8.162522 -0.980686,0.857626 -1.464135,1.279345 -1.718443,1.531102 z"
                 ></path>
@@ -70,4 +70,4 @@ const GithubCat = () => {
     );
 };
 
-export default GithubCat;
+export default GithubCatDark;

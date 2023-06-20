@@ -23,11 +23,11 @@ const Landing = () => {
     }, []);
     return (
         <div className="flex flex-col justify-center  relative h-[95vh] items-center mainBody contentWidth">
-            <section className="flex flex-col justify-between self-center relative -top-24">
+            <section className="flex flex-col justify-between self-center relative -top-24 dark:text-slate-200">
                 <h2 className="text-2xl my-2">
                     <p className="text-5xl text-center">
                         Hi I&apos;m&nbsp;
-                        <span className="px-2 bg-red-400 font-semibold text-slate-100 hover:bg-transparent hover:text-red-400">
+                        <span className="px-2 bg-red-400 font-semibold text-slate-200 hover:bg-transparent hover:text-sky-600 dark:hover:text-sky-400">
                             Aditya Nath
                         </span>
                     </p>

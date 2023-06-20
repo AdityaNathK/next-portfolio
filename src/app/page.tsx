@@ -10,6 +10,9 @@ import TechStack from "@components/TechStack/TechStack";
 export default function Home() {
     return (
         <main>
+            <div className="dark:bg-slate-700 main"></div>
+            <div className="dark:bg-purple-800  gradient"></div>
+            <Navigation />
             <Landing />
             <About />
             <TechStack />
