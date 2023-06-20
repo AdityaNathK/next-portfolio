@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Logo from "@components/Header/Logo";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import useTheme from "@components/hooks/useTheme";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,8 +18,8 @@ type NavProps = {
 
 export const CustomLink = (props: NavProps) => {
     const { href, title, className, onScroll, isButton } = props;
-    const router = useRouter();
-    const hrefLink = router.asPath != "/" ? router.asPath.slice(1) : "/";
+    // const router = useRouter();
+    // const hrefLink = router.asPath != "/" ? router.asPath.slice(1) : "/";
 
     return (
         <Link
@@ -29,7 +29,7 @@ export const CustomLink = (props: NavProps) => {
                 isButton
                     ? `${className}`
                     : `${className} relative group ${
-                          href === hrefLink ? "navLinksActive" : "navLinks"
+                          href ? "navLinksActive" : "navLinks"
                       }
             `
             }
@@ -59,9 +59,9 @@ const Navigation = () => {
                 } sticky top-0 z-30 navHeader`}
             >
                 <GithubCat />
-                <div className="flex justify-between items-center max-w-[1440px] mx-auto pt-[15px] pb-[15px] px-[8rem] font-semibold text-lg">
+                <div className="flex justify-between items-center  pt-[15px] pb-[15px] px-[8rem] font-semibold text-lg contentWidth">
                     <Logo />
-                    <nav className="flex gap-4">
+                    <nav className="flex justfy-between gap-20">
                         <CustomLink
                             isButton={false}
                             href="/"

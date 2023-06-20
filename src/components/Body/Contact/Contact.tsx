@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 // import styles from "./Contact.module.css";
@@ -43,7 +45,7 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className={`h-full z-10 relative w-full px-5 py-5 backdrop-blur bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)] `}
+            className={`h-full z-10 relative px-5 py-5 backdrop-blur bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)] contentWidth`}
         >
             <h1 className="text-center text-4xl mb-5 font-semibold headingClass">
                 Contact Me

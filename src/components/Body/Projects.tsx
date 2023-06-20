@@ -7,7 +7,7 @@ const Portfolio = () => {
             {maskContent ? (
                 <section
                     id="portfolio"
-                    className="h-full mb-10 w-[1440px] mx-auto mainBody"
+                    className="h-full mb-10 contentWidth mainBody"
                 >
                     <h1 className="text-center text-4xl mb-10 font-semibold headingClass">
                         Portfolio

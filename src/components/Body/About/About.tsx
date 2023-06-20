@@ -8,10 +8,7 @@ const inter = Inter({
 
 const About = () => {
     return (
-        <section
-            id="about"
-            className="h-full mb-20 mainBody w-[1440px] mx-auto"
-        >
+        <section id="about" className="h-full mb-20 mainBody contentWidth">
             <div className="grid grid-cols-[2fr,1fr] items-center place-items-end">
                 <div className="flex  flex-col align-center">
                     <h1

@@ -3,7 +3,7 @@ import React from "react";
 const TechStack = () => {
     return (
         <div className="">
-            <div>Helo</div>
+            <div></div>
         </div>
     );
 };
