@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Logo from "@components/Header/Logo";
-import { usePathname } from "next/navigation";
 import useTheme from "@components/hooks/useTheme";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,7 +55,8 @@ const Navigation = () => {
                     isScrolled ? "bg-white shadow-md dark:bg-slate-800" : ""
                 } sticky top-0 z-30 navHeader`}
             >
-                {mode === "light" ? <GithubCat /> : <GithubCatDark />}
+                {(mode === "dark" && <GithubCatDark />) || <GithubCat />}
+
                 <div className="flex justify-between items-center  pt-[15px] pb-[15px] px-[8rem] font-semibold text-lg contentWidth">
                     <Logo />
                     <nav className="flex justfy-between gap-20">

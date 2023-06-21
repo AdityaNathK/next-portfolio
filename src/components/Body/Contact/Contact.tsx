@@ -45,7 +45,8 @@ const Contact = () => {
         "px-20 py-1 bg-red-400 text-2xl  hover:bg-sky-600 dark:hover:bg-sky-400 text-slate-200 dark:hover:text-slate-800 border-none cursor-pointer mx-auto rounded mb-10";
 
     return (
-        <div className="grid grid-cols-[2fr,1fr]  max-w-[1440px] mainBody mx-auto dark:bg-transparent bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)]">
+        <div className="grid grid-cols-[1fr,2fr]  max-w-[1440px] mainBody mx-auto dark:bg-transparent bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)]">
+            <section className="w-full h-[200px]"></section>
             <section
                 id="contact"
                 className={`h-full w-full sz-10 relative  py-5 backdrop-blur  contentWidth`}
@@ -89,7 +90,6 @@ const Contact = () => {
                     />
                 </form>
             </section>
-            <section className="w-full h-[200px]"></section>
         </div>
     );
 };
