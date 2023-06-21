@@ -87,8 +87,8 @@ const Navigation = () => {
                     <nav className="flex flex-row justify-stretch gap-10">
                         <button
                             type="button"
-                            className="bg-red-400 text-slate-200 rounded hover:bg-sky-600 dark:hover:bg-sky-400 hover:text-slate-200 
-                            dark:hover:text-slate-800 px-2"
+                            className="bg-red-400 text-slate-200 rounded hover:bg-sky-600 dark:bg-sky-500 dark:hover:bg-red-400 hover:text-slate-200 
+                            dark:hover:text-white px-2"
                         >
                             <CustomLink
                                 isButton={true}

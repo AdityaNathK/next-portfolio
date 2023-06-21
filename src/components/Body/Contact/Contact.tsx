@@ -42,7 +42,7 @@ const Contact = () => {
         " caret-sky-400 mb-8 px-2 py-2 bg-white border dark:border-none rounded dark:bg-slate-600";
 
     const submitBtnStyles =
-        "px-20 py-1 bg-red-400 text-2xl  hover:bg-sky-600 dark:hover:bg-sky-400 text-slate-200 dark:hover:text-slate-800 border-none cursor-pointer mx-auto rounded mb-10";
+        "px-20 py-1 bg-red-400 text-2xl  hover:bg-sky-600 dark:hover:bg-red-400 font-semibold text-slate-200 dark:bg-sky-500 dark:hover:text-white border-none cursor-pointer mx-auto rounded mb-10";
 
     return (
         <div className="grid grid-cols-[1fr,2fr]  max-w-[1440px] mainBody mx-auto dark:bg-transparent bg-pink-100/10 shadow-[0_25px_45px_0_rgba(0,0,0,0.1s)]">
