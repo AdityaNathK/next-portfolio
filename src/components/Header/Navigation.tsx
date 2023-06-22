@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import Logo from "@components/Header/Logo";
-import { useRouter } from "next/router";
 import useTheme from "@components/hooks/useTheme";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import GithubCat from "@components/GithubCat/GithubCat";
+import GithubCatDark from "@components/GithubCat/GithubCatDark";
 
 type NavProps = {
     href: string;
@@ -18,9 +18,20 @@ type NavProps = {
 
 export const CustomLink = (props: NavProps) => {
     const { href, title, className, onScroll, isButton } = props;
-    const router = useRouter();
-    const hrefLink = router.asPath != "/" ? router.asPath.slice(1) : "/";
-
+    const handleScroll = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ) => {
+        // first prevent the default behavior
+        e.preventDefault();
+        // get the href and remove everything before the hash (#)
+        const href = e.currentTarget.href;
+        const targetId = href.replace(/.*\#/, "");
+        // get the element by id and use scrollIntoView
+        const elem = document.getElementById(targetId);
+        elem?.scrollIntoView({
+            behavior: "smooth",
+        });
+    };
     return (
         <Link
             href={href}
@@ -28,11 +39,11 @@ export const CustomLink = (props: NavProps) => {
             className={
                 isButton
                     ? `${className}`
-                    : `${className} relative group ${
-                          href === hrefLink ? "navLinksActive" : "navLinks"
-                      }
+                    : `${className} relative navLinks  
+                      dark:text-slate-200
             `
             }
+            onClick={handleScroll}
         >
             {title}
         </Link>
@@ -51,23 +62,25 @@ const Navigation = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
     return (
         <>
             <header
                 className={`${
-                    isScrolled ? "bg-white shadow-md" : ""
+                    isScrolled ? "bg-white shadow-md dark:bg-[#332a43]" : ""
                 } sticky top-0 z-30 navHeader`}
             >
-                <GithubCat />
-                <div className="flex justify-between items-center max-w-[1440px] mx-auto pt-[15px] pb-[15px] px-[8rem] font-semibold text-lg">
+                {(mode === "dark" && <GithubCatDark />) || <GithubCat />}
+
+                <div className="flex justify-between items-center  pt-[15px] pb-[15px] px-[8rem] font-semibold text-[#332a43] text-lg contentWidth">
                     <Logo />
-                    <nav className="flex gap-4">
+                    <nav className="flex justfy-between gap-20">
                         <CustomLink
                             isButton={false}
-                            href="/"
+                            href="#home"
                             className=""
                             title="Home"
-                            onScroll={true}
+                            onScroll={false}
                         />
 
                         <CustomLink
@@ -75,7 +88,7 @@ const Navigation = () => {
                             href="#about"
                             className=""
                             title="About"
-                            onScroll={true}
+                            onScroll={false}
                         />
 
                         <CustomLink
@@ -83,20 +96,21 @@ const Navigation = () => {
                             href="#portfolio"
                             className=""
                             title="Portfolio"
-                            onScroll={true}
+                            onScroll={false}
                         />
                     </nav>
                     <nav className="flex flex-row justify-stretch gap-10">
                         <button
                             type="button"
-                            className="bg-red-400 text-white rounded hover:bg-white hover:text-black px-2"
+                            className="bg-red-400 text-slate-200 rounded hover:bg-sky-600 dark:bg-sky-500 dark:hover:bg-red-400 hover:text-slate-200 
+                            dark:hover:text-white px-2"
                         >
                             <CustomLink
                                 isButton={true}
                                 href="#contact"
                                 className=""
                                 title="Contact"
-                                onScroll={true}
+                                onScroll={false}
                             />
                         </button>
                         <button
@@ -110,9 +124,15 @@ const Navigation = () => {
                             className="min-w-[18px]"
                         >
                             {mode === "dark" ? (
-                                <FontAwesomeIcon icon={faSun} />
+                                <FontAwesomeIcon
+                                    icon={faSun}
+                                    className=" dark:text-slate-200 dark:hover:text-sky-400 "
+                                />
                             ) : (
-                                <FontAwesomeIcon icon={faMoon} />
+                                <FontAwesomeIcon
+                                    icon={faMoon}
+                                    className="dark:text-slate-200 text-[#332a43] hover:text-sky-600"
+                                />
                             )}
                         </button>
                     </nav>

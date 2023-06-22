@@ -13,7 +13,7 @@
 } */
 
 .listClass {
-    --stack-color: #555252;
+    --stack-color: #f1c0c0;
 
     color: white;
     position: relative;
@@ -77,7 +77,7 @@
 .textClass {
     text-decoration: none;
     text-shadow: var(--shadow);
-    color: var(--clr);
+    /* color: var(--clr); */
     display: block;
     text-transform: uppercase;
     letter-spacing: 0.05em;

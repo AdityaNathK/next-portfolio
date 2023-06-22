@@ -22,8 +22,16 @@
     z-index: 2;
 }
 
+.dark .spanIcon {
+    background: #1b1b1b;
+}
+
 .icon:hover .spanIcon .iconStyles {
     color: white;
+}
+
+.icon:hover .spanIcon .jsBrand {
+    color: #332a43;
 }
 
 .iconStyles {

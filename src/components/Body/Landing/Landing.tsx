@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,12 +22,15 @@ const Landing = () => {
         };
     }, []);
     return (
-        <div className="flex flex-col justify-center mainBody relative h-[95vh] items-center max-w-[1440px] mx-auto">
-            <section className="flex flex-col justify-between self-center relative -top-24">
+        <div
+            id="home"
+            className="flex flex-col justify-center  relative h-[95vh] items-center mainBody contentWidth"
+        >
+            <section className="flex flex-col justify-between self-center relative -top-24 text-[#332a43] dark:text-slate-200">
                 <h2 className="text-2xl my-2">
-                    <p className="text-5xl text-center">
+                    <p className="text-5xl text-center ">
                         Hi I&apos;m&nbsp;
-                        <span className="px-2 bg-red-400 font-semibold text-slate-100 hover:bg-transparent hover:text-red-400">
+                        <span className="px-2 bg-red-400 font-semibold text-slate-200 dark:bg-sky-500 dark:hover:bg-transparent hover:bg-transparent hover:text-sky-600 dark:hover:text-red-400">
                             Aditya Nath
                         </span>
                     </p>
@@ -69,60 +73,10 @@ const Landing = () => {
             {isScrolled ? (
                 ""
             ) : (
-                <a href="#about" className="relative top-[23%]">
+                <a href="#about" className="relative top-[15%]">
                     <ScrollIndicator />
                 </a>
             )}
-
-            {/* <section
-                className={`${styles.activeSpan} flex items-center justify-center`}
-            >
-                <h3 className="text-xl pr-5 font-medium">Tech Stack</h3>
-                <div className="flex gap-3 items-center">
-                    <span className="text-2xl">|</span>
-                    <TechStackBadge
-                        isSocial={false}
-                        tooltip="HTML"
-                        iconSrc={faHtml5}
-                        styleClass="htmlBrand"
-                    />
-                    <TechStackBadge
-                        isSocial={false}
-                        tooltip="CSS"
-                        iconSrc={faCss3Alt}
-                        styleClass="cssBrand"
-                    />
-                    <TechStackBadge
-                        isSocial={false}
-                        tooltip="JS"
-                        iconSrc={faJs}
-                        styleClass="jsBrand"
-                    />
-                    <TechStackBadge
-                        isSocial={false}
-                        tooltip="ReactJs"
-                        iconSrc={faReact}
-                        styleClass="reactBrand"
-                    />
-                    <TechStackBadge
-                        isSocial={false}
-                        tooltip="SCSS"
-                        iconSrc={faSass}
-                        styleClass="scssBrand"
-                    />
-                    <TechImageBadge tooltip="NextJs" styleClass="nextBrand" />
-                    <TechImageBadge
-                        tooltip="Tailwind"
-                        styleClass="tailwindBrand"
-                    />
-                    <TechImageBadge
-                        tooltip="Flutter"
-                        styleClass="flutterBrand"
-                    />
-                    <TechImageBadge tooltip="TypeScript" styleClass="tsBrand" />
-                </div>
-                <div>&nbsp;</div>
-            </section> */}
         </div>
     );
 };

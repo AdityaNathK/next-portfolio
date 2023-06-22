@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <section className="py-10 px-36 bg-slate-800 mt-5 absolute w-full text-xl font-semibold z-10 text-white">
-            <div className="flex flex-row items-center justify-between w-[1440px] mx-auto mainBody">
+        <section className="py-10 px-36 bg-[#232338] dark:bg-transparent mt-5 absolute w-full text-xl font-semibold z-10 text-slate-200">
+            <div className="flex flex-row items-center justify-between contentWidth">
                 <p className="w-full">
                     Copyright © 2023. All rights are reserved to Aditya Nath
                     Kalla

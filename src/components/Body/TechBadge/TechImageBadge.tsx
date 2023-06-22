@@ -27,7 +27,9 @@ const TechImageBadge = (props: svgBadgeProps) => {
         <div>
             <div className={`${styles.icon} ${brandStyles} font-medium`}>
                 <div className={styles.tooltip}>{tooltip}</div>
-                <span className={`${styles.spanIcon} ${brandStyles}`}></span>
+                <span
+                    className={`${styles.spanIcon} dark:bg-[#554570] ${brandStyles}`}
+                ></span>
             </div>
         </div>
     );

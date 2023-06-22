@@ -45,7 +45,7 @@ const TechStackBadge = (props: BadgeProps) => {
                 ) : (
                     <div className={`${styles.tooltip}`}>{tooltip}</div>
                 )}
-                <span className={`${styles.spanIcon}`}>
+                <span className={`${styles.spanIcon} dark:bg-[#554570]`}>
                     <FontAwesomeIcon
                         className={`${styles.iconStyles} ${brandStyles}`}
                         icon={iconSrc}

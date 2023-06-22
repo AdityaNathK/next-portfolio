@@ -6,8 +6,14 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 const ScrollIndicator = () => {
     return (
         <div className={styles.indicator}>
-            <FontAwesomeIcon className={`${styles.down} `} icon={faAngleDown} />
-            <FontAwesomeIcon className={`${styles.down}`} icon={faAngleDown} />
+            <FontAwesomeIcon
+                className={`${styles.down} dark:text-slate-200`}
+                icon={faAngleDown}
+            />
+            <FontAwesomeIcon
+                className={`${styles.down} dark:text-slate-200`}
+                icon={faAngleDown}
+            />
         </div>
     );
 };
