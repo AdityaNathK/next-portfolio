@@ -18,7 +18,20 @@ type NavProps = {
 
 export const CustomLink = (props: NavProps) => {
     const { href, title, className, onScroll, isButton } = props;
-
+    const handleScroll = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ) => {
+        // first prevent the default behavior
+        e.preventDefault();
+        // get the href and remove everything before the hash (#)
+        const href = e.currentTarget.href;
+        const targetId = href.replace(/.*\#/, "");
+        // get the element by id and use scrollIntoView
+        const elem = document.getElementById(targetId);
+        elem?.scrollIntoView({
+            behavior: "smooth",
+        });
+    };
     return (
         <Link
             href={href}
@@ -30,6 +43,7 @@ export const CustomLink = (props: NavProps) => {
                       dark:text-slate-200
             `
             }
+            onClick={handleScroll}
         >
             {title}
         </Link>
@@ -48,6 +62,7 @@ const Navigation = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
     return (
         <>
             <header
@@ -62,26 +77,26 @@ const Navigation = () => {
                     <nav className="flex justfy-between gap-20">
                         <CustomLink
                             isButton={false}
-                            href="/"
+                            href="#home"
                             className=""
                             title="Home"
-                            onScroll={true}
+                            onScroll={false}
                         />
 
                         <CustomLink
                             isButton={false}
-                            href="/#about"
+                            href="#about"
                             className=""
                             title="About"
-                            onScroll={true}
+                            onScroll={false}
                         />
 
                         <CustomLink
                             isButton={false}
-                            href="/#portfolio"
+                            href="#portfolio"
                             className=""
                             title="Portfolio"
-                            onScroll={true}
+                            onScroll={false}
                         />
                     </nav>
                     <nav className="flex flex-row justify-stretch gap-10">
@@ -92,10 +107,10 @@ const Navigation = () => {
                         >
                             <CustomLink
                                 isButton={true}
-                                href="/#contact"
+                                href="#contact"
                                 className=""
                                 title="Contact"
-                                onScroll={true}
+                                onScroll={false}
                             />
                         </button>
                         <button

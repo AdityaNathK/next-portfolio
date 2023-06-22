@@ -26,10 +26,10 @@ const About = () => {
             >
                 About Me
             </h1>
-            <div className="grid grid-cols-[2fr,1fr] items-center place-items-end">
+            <div className="grid grid-cols-[2fr,1fr] gap-2 items-center place-items-end">
                 <div className="flex  flex-col align-center ">
                     <p
-                        className={` items-right text-justify text-lg font-normal text-[#332a43] w-full dark:text-slate-200`}
+                        className={`text-justify text-lg font-normal text-[#332a43] w-full dark:text-slate-200`}
                     >
                         I&apos;m on a journey to refine my skills and make a
                         mark in the digital world. I loves to bring ideas to
@@ -98,14 +98,14 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <section className="flex align-center w-full justify-center h-full">
+                <section className="flex align-center w-full justify-end h-full">
                     <div className={`${styles.box}`}>
                         <Image
                             className={styles.profileImage}
                             src="/assets/images/profile-image.jpg"
                             alt="Profile image"
-                            width={600}
-                            height={600}
+                            width={800}
+                            height={800}
                         />
                     </div>
                 </section>

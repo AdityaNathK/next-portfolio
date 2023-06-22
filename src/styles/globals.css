@@ -10,21 +10,8 @@
 
 :root {
     --main-colo-rgb: #0284c7;
-    /* --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255; */
 }
 
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
-} */
-
-/* 
-  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
-*/
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
@@ -64,7 +51,6 @@ html {
     position: fixed;
     display: flex;
     justify-content: space-between;
-    /* padding: 120px 24px 160px 24px; */
     margin: 0 auto;
     pointer-events: none;
 }
@@ -124,6 +110,10 @@ html {
     margin: 0 auto;
 }
 
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the 
+  creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
 .gradient {
     height: 100%;
     z-index: 1;
@@ -185,10 +175,7 @@ html {
         padding: 0;
     }
 }
-/* 
-.app {
-    @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
-} */
+
 .headingClass {
     color: var(--main-colo-rgb);
     text-transform: uppercase;
@@ -329,13 +316,10 @@ html {
 
 .navLinksActive {
     color: var(--main-colo-rgb);
-    /* border-bottom: 2px solid rgb(186 230 253); */
-    /* background-color: rgb(186 230 253); */
     opacity: 1;
 }
 
 .image {
-    /* z-index: 20; */
     width: 150px;
     height: 150px;
     background-color: blanchedalmond;

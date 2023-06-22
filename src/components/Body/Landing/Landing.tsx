@@ -22,7 +22,10 @@ const Landing = () => {
         };
     }, []);
     return (
-        <div className="flex flex-col justify-center  relative h-[95vh] items-center mainBody contentWidth">
+        <div
+            id="home"
+            className="flex flex-col justify-center  relative h-[95vh] items-center mainBody contentWidth"
+        >
             <section className="flex flex-col justify-between self-center relative -top-24 text-[#332a43] dark:text-slate-200">
                 <h2 className="text-2xl my-2">
                     <p className="text-5xl text-center ">
