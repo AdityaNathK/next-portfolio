@@ -1,6 +1,18 @@
 import styles from "./About.module.css";
 import Image from "next/image";
 import { Inter, Roboto } from "next/font/google";
+import TechStackBadge from "@components/Body/TechBadge/TechStackBadge";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faLinkedin,
+    faGithub,
+    faHtml5,
+    faCss3Alt,
+    faJs,
+    faReact,
+    faSass,
+} from "@fortawesome/free-brands-svg-icons";
+import TechImageBadge from "@components/Body/TechBadge/TechImageBadge";
 const inter = Inter({
     subsets: ["latin"],
     weight: ["100", "300", "400", "500", "700"],
@@ -9,13 +21,13 @@ const inter = Inter({
 const About = () => {
     return (
         <section id="about" className="h-full mainBody mb-20 contentWidth">
+            <h1
+                className={`text-left text-4xl mb-10 font-semibold headingClass w-full dark:text-sky-400`}
+            >
+                About Me
+            </h1>
             <div className="grid grid-cols-[2fr,1fr] items-center place-items-end">
                 <div className="flex  flex-col align-center ">
-                    <h1
-                        className={`text-left text-4xl mb-10 font-semibold headingClass w-full dark:text-sky-400`}
-                    >
-                        About Me
-                    </h1>
                     <p
                         className={` items-right text-justify text-lg font-normal text-slate-800 w-full dark:text-slate-200`}
                     >
@@ -29,8 +41,64 @@ const About = () => {
                         and SCSS, I&apos;m eager to showcase my projects and
                         demonstrate my potential.&nbsp;
                     </p>
+                    <div className="flex flex-row mt-20 mb-10 gap-5 ">
+                        <h3
+                            className={` flextext-left text-lg  font-semibold headingClass w-full dark:text-sky-400`}
+                        >
+                            My <br />
+                            Tech Stack
+                        </h3>
+                        <div className="flex gap-3 items-center">
+                            <TechStackBadge
+                                isSocial={false}
+                                tooltip="HTML"
+                                iconSrc={faHtml5}
+                                styleClass="htmlBrand"
+                            />
+                            <TechStackBadge
+                                isSocial={false}
+                                tooltip="CSS"
+                                iconSrc={faCss3Alt}
+                                styleClass="cssBrand"
+                            />
+                            <TechStackBadge
+                                isSocial={false}
+                                tooltip="JS"
+                                iconSrc={faJs}
+                                styleClass="jsBrand"
+                            />
+                            <TechStackBadge
+                                isSocial={false}
+                                tooltip="ReactJs"
+                                iconSrc={faReact}
+                                styleClass="reactBrand"
+                            />
+                            <TechStackBadge
+                                isSocial={false}
+                                tooltip="SCSS"
+                                iconSrc={faSass}
+                                styleClass="scssBrand"
+                            />
+                            <TechImageBadge
+                                tooltip="NextJs"
+                                styleClass="nextBrand"
+                            />
+                            <TechImageBadge
+                                tooltip="Tailwind"
+                                styleClass="tailwindBrand"
+                            />
+                            <TechImageBadge
+                                tooltip="Flutter"
+                                styleClass="flutterBrand"
+                            />
+                            <TechImageBadge
+                                tooltip="TypeScript"
+                                styleClass="tsBrand"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <section className="flex align-center ">
+                <section className="flex align-center w-full justify-center h-full">
                     <div className={`${styles.box}`}>
                         <Image
                             className={styles.profileImage}

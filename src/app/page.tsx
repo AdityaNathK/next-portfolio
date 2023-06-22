@@ -6,32 +6,19 @@ import Projects from "@components/Body/Projects";
 import Landing from "@components/Body/Landing/Landing";
 import Footer from "@components/Footer/Footer";
 import TechStack from "@components/TechStack/TechStack";
+import IsoTechStack from "@components/TechStack/IsoTechStack/IsoTechStack";
 
 export default function Home() {
     return (
         <main>
-            <div className="dark:bg-slate-700 main"></div>
-            <div className="dark:bg-purple-800  gradient"></div>
+            <div className="dark:bg-[#332a43] main"></div>
+            <div className="dark:bg-[#5c4d76]  gradient"></div>
             <Navigation />
             <Landing />
             <About />
-            <TechStack />
             <Projects />
             <Contact />
             <Footer />
         </main>
     );
 }
-
-/* <Head>
-                <script
-                    src="https:/kit.fontawesome.com/a076d05399.js"
-                    defer
-                ></script>
-            </Head>
-            <body>
-                <div className="main"></div>
-                <div className="gradient"></div>
-                <Main />
-                <NextScript />
-            </body> */

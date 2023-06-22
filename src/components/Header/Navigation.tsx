@@ -52,7 +52,7 @@ const Navigation = () => {
         <>
             <header
                 className={`${
-                    isScrolled ? "bg-white shadow-md dark:bg-slate-800" : ""
+                    isScrolled ? "bg-white shadow-md dark:bg-[#332a43]" : ""
                 } sticky top-0 z-30 navHeader`}
             >
                 {(mode === "dark" && <GithubCatDark />) || <GithubCat />}

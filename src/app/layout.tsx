@@ -7,8 +7,8 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata = {
-    title: "Aditya Nath",
-    description: "Welcome to Aditya Nath Portfolio",
+    title: "Aditya Nath | Portfolio",
+    description: "Welcome to Aditya Nath's Portfolio",
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-// import styles from "./Contact.module.css";
+import Image from "next/image";
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -45,11 +45,19 @@ const Contact = () => {
         "px-20 py-1 bg-red-400 text-2xl  hover:bg-sky-600 dark:hover:bg-red-400 font-semibold text-slate-200 dark:bg-sky-500 dark:hover:text-white border-none cursor-pointer mx-auto rounded mb-10";
 
     return (
-        <div className="grid grid-cols-[1fr,1fr]  max-w-[1440px] mainBody mx-auto dark:bg-transparent">
-            <section className="w-full h-[200px]"></section>
+        <div className="grid grid-cols-[1fr,1fr]  max-w-[1440px] gap-5 mainBody mx-auto dark:bg-transparent items-center">
+            <section className="w-full h-full flex items-center order-2">
+                <Image
+                    className=" relative w-full rounded-xl"
+                    src="/assets/images/mail.webp"
+                    alt="Contact mail image"
+                    width={600}
+                    height={600}
+                />
+            </section>
             <section
                 id="contact"
-                className={`h-full w-full sz-10 relative  py-5 backdrop-blur  contentWidth`}
+                className={`h-full w-full sz-10 relative  py-5 backdrop-blur  contentWidth order-1`}
             >
                 <h1 className="text-left text-4xl mb-5 font-semibold headingClass dark:text-sky-400">
                     Contact Me

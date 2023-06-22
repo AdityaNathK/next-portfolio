@@ -21,9 +21,8 @@
     position: relative;
     z-index: 5;
 }
-
 .nextBrand {
-    background-image: url("/assets/images/fa-next.svg");
+    background-image: url("/assets/images/fa-next-dark.svg");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,14 +30,14 @@
 }
 
 .tailwindBrand {
-    background-image: url("/assets/images/fa-tailwind.svg");
+    background-image: url("/assets/images/fa-tailwind-dark.svg");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .flutterBrand {
-    background-image: url("/assets/images/fa-flutter.svg");
+    background-image: url("/assets/images/fa-flutter-dark.svg");
     background-size: 50%;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -46,7 +45,7 @@
 }
 
 .tsBrand {
-    background-image: url("/assets/images/fa-typescript.svg");
+    background-image: url("/assets/images/fa-typescript-dark.svg");
     background-size: 50%;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -95,7 +94,7 @@
 }
 
 .nextBrand:hover .spanIcon {
-    background-image: url("/assets/images/fa-next-light.svg");
+    background-image: url("/assets/images/fa-next.svg");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -108,7 +107,7 @@
 }
 
 .tailwindBrand:hover .spanIcon {
-    background-image: url("/assets/images/fa-tailwind-dark.svg");
+    background-image: url("/assets/images/fa-tailwind.svg");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -121,7 +120,7 @@
 }
 
 .flutterBrand:hover .spanIcon {
-    background-image: url("/assets/images/fa-flutter-dark.svg");
+    background-image: url("/assets/images/fa-flutter.svg");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -134,7 +133,7 @@
 }
 
 .tsBrand:hover .spanIcon {
-    background-image: url("/assets/images/fa-typescript-dark.svg");
+    background-image: url("/assets/images/fa-typescript.svg");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
