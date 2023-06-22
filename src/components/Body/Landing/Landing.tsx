@@ -1,74 +1,81 @@
-import TechStackBadge from "@components/Body/TechBadge/TechStackBadge";
-import Image from "next/image";
 import Link from "next/link";
-import styles from "./Landing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faLinkedin,
     faGithub,
-    faHtml5,
-    faCss3Alt,
-    faJs,
-    faReact,
-    faSass,
+    faNpm,
 } from "@fortawesome/free-brands-svg-icons";
-import TechImageBadge from "@components/Body/TechBadge/TechImageBadge";
+import ScrollIndicator from "@components/ScrollIndicator/ScrollIndicator";
+import { useEffect, useState } from "react";
 
 const Landing = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            const isTop = window.scrollY < 45;
+            setIsScrolled(!isTop);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
     return (
-        <div className="container flex flex-col justify-center mb-20">
-            <section
-                id="landing"
-                className=" flex items-center gap-10 justify-center relative h-[22rem] content text-black z-10"
-            >
-                <div className={`${styles.box}`}>
-                    <div className={styles.content}>
-                        <Image
-                            className={styles.profileImage}
-                            src="/assets/images/profile-image.jpg"
-                            alt="Profile image"
-                            width={600}
-                            height={600}
-                        />
-                    </div>
-                </div>
-                <section className="">
-                    <h2 className="text-2xl w-[40rem] my-10 text-right">
-                        <p className="text-4xl -mb-2">
-                            Hi I&apos;m
-                            <span className="px-2 mx-3 bg-red-400 font-semibold text-slate-100 hover:bg-transparent hover:text-red-400">
-                                Aditya Nath
-                            </span>
-                        </p>
-                    </h2>
-                    <br />
-                    <p className="text-lg font-medium text-right">
-                        A passionate and ambitious front-end developer
-                        <br />
-                        based in Adelaide, Australia 🇦🇺
-                        <span></span>
+        <div className="flex flex-col justify-center mainBody relative h-[95vh] items-center max-w-[1440px] mx-auto">
+            <section className="flex flex-col justify-between self-center relative -top-24">
+                <h2 className="text-2xl my-2">
+                    <p className="text-5xl text-center">
+                        Hi I&apos;m&nbsp;
+                        <span className="px-2 bg-red-400 font-semibold text-slate-100 hover:bg-transparent hover:text-red-400">
+                            Aditya Nath
+                        </span>
                     </p>
-                    <section className="flex gap-5 w-full justify-end mt-5">
-                        <Link
-                            href="https://github.com/AdityaNathK"
-                            target="_blank"
-                        >
-                            <FontAwesomeIcon
-                                className={` w-6 h-6 px-2 py-2 bg-[#333] text-white hover:bg-white rounded-[50%] hover:text-[#333]`}
-                                icon={faGithub}
-                            />
-                        </Link>
-                        <Link href="https://www.linkedin.com/in/aditya-nath-kalla/">
-                            <FontAwesomeIcon
-                                className={` w-6 h-6 px-2 py-2 bg-[#0072b1] text-white hover:bg-white rounded-[50%] hover:text-[#0072b1]`}
-                                icon={faLinkedin}
-                            />
-                        </Link>
-                    </section>
+                </h2>
+                <br />
+                <p className="text-2xl font-medium text-center px-24">
+                    I specialize in translating design concepts into functional
+                    responsive websites with a focus on creating engaging and
+                    user-friendly web experiences
+                    <br />I am based in Australia 🇦🇺
+                    <span></span>
+                </p>
+                <section className="flex gap-5 w-full mt-14 justify-center">
+                    <Link href="https://github.com/AdityaNathK" target="_blank">
+                        <FontAwesomeIcon
+                            className={` w-6 h-6 px-2 py-2 bg-[#333] text-white hover:bg-white rounded-[50%] hover:text-[#333]`}
+                            icon={faGithub}
+                        />
+                    </Link>
+                    <Link
+                        href="https://www.linkedin.com/in/aditya-nath-kalla/"
+                        target="_blank"
+                    >
+                        <FontAwesomeIcon
+                            className={` w-6 h-6 px-2 py-2 bg-[#0072b1] text-white hover:bg-white rounded-[50%] hover:text-[#0072b1]`}
+                            icon={faLinkedin}
+                        />
+                    </Link>
+                    <Link
+                        href="https://www.npmjs.com/~adityanath"
+                        target="_blank"
+                    >
+                        <FontAwesomeIcon
+                            className={` w-6 h-6 px-2 py-2 bg-[#cb3837] text-white hover:bg-white rounded-[50%] hover:text-[#cb3837]`}
+                            icon={faNpm}
+                        />
+                    </Link>
                 </section>
             </section>
-            <section
-                className={`${styles.activeSpan} flex mt-5 items-center justify-center`}
+            {isScrolled ? (
+                ""
+            ) : (
+                <a href="#about" className="relative top-[23%]">
+                    <ScrollIndicator />
+                </a>
+            )}
+
+            {/* <section
+                className={`${styles.activeSpan} flex items-center justify-center`}
             >
                 <h3 className="text-xl pr-5 font-medium">Tech Stack</h3>
                 <div className="flex gap-3 items-center">
@@ -115,7 +122,7 @@ const Landing = () => {
                     <TechImageBadge tooltip="TypeScript" styleClass="tsBrand" />
                 </div>
                 <div>&nbsp;</div>
-            </section>
+            </section> */}
         </div>
     );
 };

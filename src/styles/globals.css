@@ -90,29 +90,33 @@ html {
     opacity: 0.4;
     filter: invert(1);
 }
+.mainBody {
+    padding: 0 9rem;
+    position: relative;
+    z-index: 10;
+}
 
 .gradient {
     height: 100%;
     z-index: 1;
     width: 100%;
-    max-width: 640px;
     background-image: radial-gradient(
             at 27% 37%,
             hsla(215, 98%, 61%, 1) 0px,
             transparent 0%
         ),
         radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-        radial-gradient(at 97% 21%, hsla(180, 98%, 72%, 1) 0px, transparent 50%),
-        radial-gradient(at 52% 99%, hsla(355, 98%, 61%, 1) 0px, transparent 50%),
+        radial-gradient(at 97% 21%, rgb(201, 187, 110) 0px, transparent 50%),
+        radial-gradient(at 52% 99%, rgb(62, 140, 151) 0px, transparent 50%),
         radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
         radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
         radial-gradient(at 75% 99%, hsla(600, 98%, 61%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 21%, rgb(254, 184, 114) 0px, transparent 50%),
         radial-gradient(at 80% 29%, hsla(20, 96%, 67%, 1) 0px, transparent 0%),
         radial-gradient(at 32% 96%, hsla(0, 60%, 74%, 1) 0px, transparent 50%),
         radial-gradient(at 33% 50%, hsla(210, 67%, 73%, 1) 0px, transparent 50%),
         radial-gradient(at 12% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
-    position: absolute;
+    position: fixed;
     content: "";
     width: 100%;
     filter: blur(100px) saturate(150%);
