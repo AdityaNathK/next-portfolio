@@ -62,14 +62,14 @@ const Contact = () => {
                 <h1 className="text-left text-4xl mb-5 font-semibold headingClass dark:text-sky-400">
                     Contact Me
                 </h1>
-                <p className="text-left text-xl mb-5 font-medium dark:text-slate-200">
+                <p className="text-left text-xl mb-5 font-medium text-[#332a43] dark:text-slate-200">
                     Don&apos;t be shy! Hit me up! 👇
                 </p>
 
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className={`${container} dark:text-slate-200`}
+                    className={`${container} dark:text-slate-200 text-[#332a43]`}
                 >
                     <label className={labelStyles}>Full Name</label>
                     <input

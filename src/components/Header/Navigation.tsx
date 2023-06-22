@@ -57,7 +57,7 @@ const Navigation = () => {
             >
                 {(mode === "dark" && <GithubCatDark />) || <GithubCat />}
 
-                <div className="flex justify-between items-center  pt-[15px] pb-[15px] px-[8rem] font-semibold text-lg contentWidth">
+                <div className="flex justify-between items-center  pt-[15px] pb-[15px] px-[8rem] font-semibold text-[#332a43] text-lg contentWidth">
                     <Logo />
                     <nav className="flex justfy-between gap-20">
                         <CustomLink
@@ -116,7 +116,7 @@ const Navigation = () => {
                             ) : (
                                 <FontAwesomeIcon
                                     icon={faMoon}
-                                    className="dark:text-slate-200 hover:text-sky-600"
+                                    className="dark:text-slate-200 text-[#332a43] hover:text-sky-600"
                                 />
                             )}
                         </button>
