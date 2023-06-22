@@ -1,7 +1,7 @@
 import styles from "./About.module.css";
 import Image from "next/image";
 import { Inter, Roboto } from "next/font/google";
-import TechStackBadge from "@components/Body/TechBadge/TechStackBadge";
+import TechStackBadge from "@/src/components/Body/TechBadge/TechStackBadge";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faLinkedin,
@@ -12,7 +12,7 @@ import {
     faReact,
     faSass,
 } from "@fortawesome/free-brands-svg-icons";
-import TechImageBadge from "@components/Body/TechBadge/TechImageBadge";
+import TechImageBadge from "@/src/components/Body/TechBadge/TechImageBadge";
 const inter = Inter({
     subsets: ["latin"],
     weight: ["100", "300", "400", "500", "700"],

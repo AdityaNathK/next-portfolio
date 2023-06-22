@@ -6,7 +6,7 @@ import {
     faGithub,
     faNpm,
 } from "@fortawesome/free-brands-svg-icons";
-import ScrollIndicator from "@components/ScrollIndicator/ScrollIndicator";
+import ScrollIndicator from "@/src/components/ScrollIndicator/ScrollIndicator";
 import { useEffect, useState } from "react";
 
 const Landing = () => {

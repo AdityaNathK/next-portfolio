@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import Logo from "@components/Header/Logo";
-import useTheme from "@components/hooks/useTheme";
+import Logo from "@/src/components/Header/Logo";
+import useTheme from "@/src/components/hooks/useTheme";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import GithubCat from "@components/GithubCat/GithubCat";
-import GithubCatDark from "@components/GithubCat/GithubCatDark";
+import GithubCat from "@/src/components/GithubCat/GithubCat";
+import GithubCatDark from "@/src/components/GithubCat/GithubCatDark";
 
 type NavProps = {
     href: string;
