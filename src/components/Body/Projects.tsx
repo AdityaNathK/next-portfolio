@@ -1,7 +1,17 @@
-import Construction from "@components/UnderConstruction/UnderConstruction";
+import Construction from "@/src/components/UnderConstruction/UnderConstruction";
+import { getProject } from "@src/sanity/sanity.utils";
+import {
+    Key,
+    ReactElement,
+    JSXElementConstructor,
+    ReactFragment,
+    ReactPortal,
+    PromiseLikeOfReactNode,
+} from "react";
 
 const maskContent = true;
-const Portfolio = () => {
+const Portfolio = async () => {
+    const projects = await getProject();
     return (
         <div>
             {maskContent ? (
@@ -25,9 +35,9 @@ const Portfolio = () => {
                 </section>
             ) : (
                 <section id="projects" className="h-96 mb-20">
-                    <>
-                        <p>Each project is a unique piece of development</p>
-                    </>
+                    {projects.map((project: any) => (
+                        <div key={project._id}>{project.image}</div>
+                    ))}
                 </section>
             )}
         </div>

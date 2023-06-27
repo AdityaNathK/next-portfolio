@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/src/styles/globals.css";
 import { Rajdhani } from "next/font/google";
 
 const rajdhani = Rajdhani({

@@ -1,10 +1,10 @@
 import { NextPage } from "next";
-import Navigation from "@components/Header/Navigation";
-import About from "@components/Body/About/About";
-import Contact from "@components/Body/Contact/Contact";
-import Projects from "@components/Body/Projects";
-import Landing from "@components/Body/Landing/Landing";
-import Footer from "@components/Footer/Footer";
+import Navigation from "@/src/components/Header/Navigation";
+import About from "@/src/components/Body/About/About";
+import Contact from "@/src/components/Body/Contact/Contact";
+import Projects from "@/src/components/Body/Projects";
+import Landing from "@/src/components/Body/Landing/Landing";
+import Footer from "@/src/components/Footer/Footer";
 
 const Home: NextPage = () => {
     return (
