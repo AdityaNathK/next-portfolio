@@ -48,6 +48,7 @@ const Contact = () => {
         <div className="grid grid-cols-[1fr,1fr]  max-w-[1440px] gap-5 mainBody mx-auto dark:bg-transparent items-center">
             <section className="w-full h-full flex items-center order-2">
                 <Image
+                    priority
                     className=" relative w-full rounded-xl"
                     src="/assets/images/mail.webp"
                     alt="Contact mail image"

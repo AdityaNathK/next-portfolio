@@ -101,6 +101,7 @@ const About = () => {
                 <section className="flex align-center w-full justify-end h-full">
                     <div className={`${styles.box}`}>
                         <Image
+                            priority
                             className={styles.profileImage}
                             src="/assets/images/profile-image.jpg"
                             alt="Profile image"

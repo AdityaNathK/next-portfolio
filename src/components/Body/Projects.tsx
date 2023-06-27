@@ -9,7 +9,7 @@ import {
     PromiseLikeOfReactNode,
 } from "react";
 
-const maskContent = false;
+const maskContent = true;
 const Portfolio = async () => {
     const projects = await getProject();
     return (
@@ -35,7 +35,7 @@ const Portfolio = async () => {
                 </section>
             ) : (
                 <section id="projects" className="h-96 mb-20">
-                    {projects.map((project) => (
+                    {projects.map((project: any) => (
                         <div key={project._id}>{project.image}</div>
                     ))}
                 </section>
